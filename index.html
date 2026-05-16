@@ -44,7 +44,21 @@ max-width: 1280px;
 margin: 0 auto;
 padding: 0 40px;
 }
+  
+/* TOP ANNOUNCEMENT BAR */
+.top-bar {
+    background: #fde8c9;
+    color: #8a4a0a;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Mukta', sans-serif;
+}
 
+@media (max-width: 768px) {
+    .top-bar { font-size: 12px; padding: 8px 16px; }
+}
 
 /* ============ HEADER ============ */
 .main-header {
@@ -411,13 +425,12 @@ font-size: 15px;
 
 /* ============ HERO SECTION ============ */
 .hero {
-padding: 80px 0;
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 80px;
-align-items: center;
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
 }
-
 
 .hero-badge {
 display: inline-block;
@@ -506,12 +519,12 @@ color: var(--text-muted);
 
 
 .hero-image {
-border-radius: 20px;
-overflow: hidden;
-box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-aspect-ratio: 4/5;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    aspect-ratio: 1/1;
+    width: 100%;
 }
-
 
 .hero-image img {
 width: 100%;
@@ -522,7 +535,7 @@ object-fit: cover;
 
 /* ============ SECTION STYLES ============ */
 .section {
-padding: 100px 0;
+padding: 50px 0;
 }
 
 
@@ -1060,7 +1073,7 @@ gap: 6px;
 
 /* ============ THOUGHT OF THE DAY ============ */
 .thought-section {
-padding: 80px 0;
+padding: 40px 0;
 }
 
 
@@ -1106,14 +1119,14 @@ color: var(--text-muted);
 /* ============ FOOTER ============ */
 footer {
 background: var(--bg-light);
-padding: 80px 0 30px;
+padding: 40px 0 30px;
 border-top: 1px solid var(--border);
 }
 
 
 .footer-grid {
 display: grid;
-grid-template-columns: 2fr 1fr 1fr 2fr;
+grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
 gap: 60px;
 margin-bottom: 50px;
 padding-bottom: 50px;
@@ -1147,32 +1160,6 @@ margin: 20px 0;
 }
 
 
-.footer-social {
-display: flex;
-gap: 12px;
-margin-top: 20px;
-}
-
-
-.footer-social a {
-width: 40px;
-height: 40px;
-border: 1px solid var(--border);
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-color: var(--text-muted);
-text-decoration: none;
-transition: all 0.3s;
-}
-
-
-.footer-social a:hover {
-background: var(--text-dark);
-color: white;
-border-color: var(--text-dark);
-}
 
 
 .footer-col-title {
@@ -1206,53 +1193,7 @@ color: var(--accent);
 }
 
 
-.newsletter-text {
-color: var(--text-muted);
-font-size: 14px;
-line-height: 1.7;
-margin-bottom: 20px;
-}
 
-
-.newsletter-form {
-display: flex;
-gap: 0;
-background: white;
-border: 1px solid var(--border);
-border-radius: 50px;
-padding: 4px;
-margin-bottom: 12px;
-}
-
-
-.newsletter-form input {
-flex: 1;
-border: none;
-outline: none;
-padding: 10px 20px;
-font-size: 14px;
-font-family: inherit;
-background: transparent;
-}
-
-
-.newsletter-form button {
-background: var(--text-dark);
-color: white;
-border: none;
-padding: 10px 24px;
-border-radius: 50px;
-font-weight: 500;
-font-size: 14px;
-cursor: pointer;
-font-family: inherit;
-}
-
-
-.newsletter-note {
-color: var(--text-muted);
-font-size: 12px;
-}
 
 
 .footer-bottom {
@@ -1522,7 +1463,9 @@ padding: 12px 16px;
 </style>
 </head>
 <body>
-
+<div class="top-bar">
+    🙏 हमारी वेबसाइट पर पधारने के लिए आपका धन्यवाद - हमारा प्रयास एक भक्त को भगवान से जोड़े रखना है 🙏
+</div>
 
 <!-- ============ HEADER ============ -->
 <header class="main-header">
@@ -2159,48 +2102,57 @@ padding: 12px 16px;
 </div>
 </div>
 <p class="footer-about">प्राचीन परंपराओं और आधुनिक भक्ति के बीच की खाई को पाटना। चालीसा, आरती और वैदिक ज्ञान के लिए आपका डिजिटल आश्रय स्थल।</p>
-<div class="footer-social">
-<a href="#"><i class="fa-brands fa-youtube"></i></a>
-<a href="#"><i class="fa-brands fa-twitter"></i></a>
-<a href="#"><i class="fa-brands fa-instagram"></i></a>
-<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-</div>
+
 </div>
 
 
 <div>
-<h4 class="footer-col-title">खोजें</h4>
+<h4 class="footer-col-title">प्रार्थनाएं</h4>
 <ul class="footer-links">
-<li><a href="/deities/">देवता</a></li>
-<li><a href="/temples/">मंदिर</a></li>
-<li><a href="/tyohar/">त्योहार</a></li>
-<li><a href="/shastra/">शास्त्र</a></li>
-<li><a href="/chalisa/">चालीसा</a></li>
+<li><a href="/deities/">आरती</a></li>
+<li><a href="/temples/">चालीसा</a></li>
+<li><a href="/tyohar/">व्रत कथा</a></li>
+<li><a href="/shastra/">भजन</a></li>
+<li><a href="/chalisa/">मंत्र</a></li>
+</ul>
+</div>
+
+<div>
+<h4 class="footer-col-title">आरती</h4>
+<ul class="footer-links">
+<li><a href="/deities/">गणेश आरती</a></li>
+<li><a href="/temples/">कृष्ण आरती</a></li>
+<li><a href="/tyohar/">दुर्गा आरती</a></li>
+<li><a href="/shastra/">हनुमान आरती</a></li>
+<li><a href="/chalisa/">राम आरती</a></li>
+</ul>
+</div>
+
+  <div>
+<h4 class="footer-col-title">चालीसा</h4>
+<ul class="footer-links">
+<li><a href="/deities/">हनुमान चालीसा</a></li>
+<li><a href="/temples/">राम चालीसा</a></li>
+<li><a href="/tyohar/">दुर्गा चालीसा</a></li>
+<li><a href="/shastra/">शिव चालीसा</a></li>
+<li><a href="/chalisa/">विष्णु चालीसा</a></li>
+</ul>
+</div>
+
+ 
+  <div>
+<h4 class="footer-col-title">देवता</h4>
+<ul class="footer-links">
+<li><a href="/deities/">गणेश</a></li>
+<li><a href="/temples/">राम</a></li>
+<li><a href="/tyohar/">हनुमान</a></li>
+<li><a href="/shastra/">विष्णु</a></li>
+<li><a href="/chalisa/">दुर्गा</a></li>
 </ul>
 </div>
 
 
-<div>
-<h4 class="footer-col-title">कंपनी</h4>
-<ul class="footer-links">
-<li><a href="/about/">हमारे बारे में</a></li>
-<li><a href="/contact/">संपर्क करें</a></li>
-<li><a href="/blog/">ब्लॉग</a></li>
-<li><a href="/privacy/">गोपनीयता</a></li>
-<li><a href="/terms/">नियम</a></li>
-</ul>
-</div>
 
-
-<div>
-<h4 class="footer-col-title">आशीर्वादित रहें</h4>
-<p class="newsletter-text">अपने इनबॉक्स में सीधे दैनिक श्लोक, शुभ समय और त्योहार की याददाश्त प्राप्त करें।</p>
-<div class="newsletter-form">
-<input type="email" placeholder="📧 अपना ईमेल दर्ज करें">
-<button>सदस्यता लें</button>
-</div>
-<p class="newsletter-note">कोई स्पैम नहीं, केवल दिव्य ऊर्जा।</p>
-</div>
 
 
 </div>
@@ -2208,11 +2160,7 @@ padding: 12px 16px;
 
 <div class="footer-bottom">
 <div>© 2026 धर्म पथ। सभी अधिकार सुरक्षित।</div>
-<div class="footer-bottom-links">
-<a href="/privacy/">गोपनीयता नीति</a>
-<a href="/terms/">सेवा की शर्तें</a>
-<a href="/cookies/">कुकी नीति</a>
-</div>
+
 </div>
 </div>
 </footer>
@@ -2284,7 +2232,3 @@ function filterCategory(btn, category) {
 
 </body>
 </html>
-
-
-
-
