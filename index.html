@@ -75,38 +75,15 @@ border-bottom: 1px solid var(--border);
 }
 
 
-.logo {
-display: flex;
-align-items: center;
-gap: 12px;
-text-decoration: none;
+.logo-img {
+    height: 50px;
+    width: auto;
+    display: block;
 }
 
-
-.logo-icon {
-font-size: 32px;
-color: #d63731;
+@media (max-width: 768px) {
+    .logo-img { height: 40px; }
 }
-
-
-.logo-text {
-font-size: 24px;
-font-family: 'Tiro Devanagari Hindi', serif;
-color: var(--text-dark);
-line-height: 1;
-}
-
-
-.logo-text small {
-display: block;
-font-size: 11px;
-color: var(--text-muted);
-letter-spacing: 2px;
-margin-top: 2px;
-font-family: 'Mukta', sans-serif;
-}
-
-
 .nav-wrapper {
 display: flex;
 align-items: center;
@@ -1123,7 +1100,15 @@ padding: 40px 0 30px;
 border-top: 1px solid var(--border);
 }
 
+.footer-logo {
+    height: 60px;
+    width: auto;
+    display: block;
+}
 
+@media (max-width: 768px) {
+    .footer-logo { height: 50px; }
+}
 .footer-grid {
 display: grid;
 grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
@@ -1470,13 +1455,8 @@ padding: 12px 16px;
 <!-- ============ HEADER ============ -->
 <header class="main-header">
 <a href="/" class="logo">
-<span class="logo-icon">ॐ</span>
-<div class="logo-text">
-धर्म पथ
-<small>सनातन धर्म</small>
-</div>
+    <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778996615/c52aed3d-c26d-48f7-8ace-8bb74f971108_ve8ab0.png" alt="भजन लोक" class="logo-img">
 </a>
-
 
 <div class="nav-wrapper">
 <nav>
@@ -2093,13 +2073,8 @@ padding: 12px 16px;
 
 
 <div>
-<div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
-<span style="font-size:36px; color:#d63731;">ॐ</span>
-<div>
-<div class="footer-brand-name">धर्म पथ
-<small>सनातन धर्म</small>
-</div>
-</div>
+<div style="margin-bottom: 16px;">
+    <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778996615/c52aed3d-c26d-48f7-8ace-8bb74f971108_ve8ab0.png" alt="भजन लोक" class="footer-logo">
 </div>
 <p class="footer-about">सनातन संस्कृति की पवित्र परंपराओं को सरल, सुंदर और डिजिटल रूप में हर भक्त तक पहुँचाने के लिए समर्पित एक आध्यात्मिक मंच।</p>
 
