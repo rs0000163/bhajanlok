@@ -217,8 +217,13 @@ text-decoration: none; color: var(--text-dark); transition: all 0.3s;
     aspect-ratio: 1/1;
     width: 100%;
 }
-.hero-image img { width: 100%; height: 100%; object-fit: cover; }
-
+.hero-image img,
+.hero-image video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
 /* ============ SECTIONS ============ */
 .section { padding: 50px 0; }
 .section-tag {
@@ -610,7 +615,9 @@ footer { padding: 60px 0 30px; }
 </div>
 
 <div class="hero-image">
-<img src="https://www.dharmapath.in/_next/image?url=%2Fimages%2Fchalisa%2Fhanuman_chalisa_devotional.png&w=1080&q=75" alt="Lord Hanuman">
+<video autoplay muted loop playsinline>
+    <source src="https://res.cloudinary.com/ddf8equjt/video/upload/v1779004304/hero-bg_opipsu.mp4" type="video/mp4">
+</video>
 </div>
 </section>
 
