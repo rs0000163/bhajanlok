@@ -68,23 +68,14 @@ z-index: 100;
 border-bottom: 1px solid var(--border);
 }
 
-.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.logo-icon { font-size: 32px; color: #d63731; }
-.logo-text {
-font-size: 24px;
-font-family: 'Cormorant Garamond', serif;
-font-weight: 600;
-color: var(--text-dark);
-line-height: 1;
+.logo-img {
+    height: 50px;
+    width: auto;
+    display: block;
 }
-.logo-text small {
-display: block;
-font-size: 11px;
-color: var(--text-muted);
-letter-spacing: 2px;
-margin-top: 2px;
-font-family: 'Inter', sans-serif;
-font-weight: 400;
+
+@media (max-width: 768px) {
+    .logo-img { height: 40px; }
 }
 
 .nav-wrapper { display: flex; align-items: center; gap: 16px; }
@@ -387,6 +378,15 @@ margin-bottom: 50px;
 padding-bottom: 50px;
 border-bottom: 1px solid var(--border);
 }
+    .footer-logo {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .footer-logo { height: 50px; }
+}
 .footer-brand-name { font-size: 28px; font-family: 'Cormorant Garamond', serif; font-weight: 600; color: var(--text-dark); margin-bottom: 4px; }
 .footer-brand-name small { display: block; font-size: 11px; color: var(--text-muted); letter-spacing: 3px; margin-top: 4px; font-family: 'Inter', sans-serif; font-weight: 400; }
 .footer-about { color: var(--text-muted); font-size: 14px; line-height: 1.7; margin: 20px 0; }
@@ -493,9 +493,8 @@ footer { padding: 60px 0 30px; }
 
 <!-- HEADER -->
 <header class="main-header">
-<a href="/en/" class="logo">
-<span class="logo-icon">ॐ</span>
-<div class="logo-text">Dharma Path<small>SANATAN DHARMA</small></div>
+<a href="/" class="logo">
+    <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778996615/c52aed3d-c26d-48f7-8ace-8bb74f971108_ve8ab0.png" alt="भजन लोक" class="logo-img">
 </a>
 
 <div class="nav-wrapper">
@@ -1051,9 +1050,8 @@ footer { padding: 60px 0 30px; }
 <div class="footer-grid">
 
 <div>
-<div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
-<span style="font-size:36px; color:#d63731;">ॐ</span>
-<div><div class="footer-brand-name">Dharma Path<small>SANATAN DHARMA</small></div></div>
+<div style="margin-bottom: 16px;">
+    <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778996615/c52aed3d-c26d-48f7-8ace-8bb74f971108_ve8ab0.png" alt="भजन लोक" class="footer-logo">
 </div>
 <p class="footer-about">A spiritual platform dedicated to bringing the sacred traditions of Sanatan culture to every devotee in a simple, beautiful and digital form.</p>
 </div>
