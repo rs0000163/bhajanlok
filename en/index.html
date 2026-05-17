@@ -68,14 +68,23 @@ z-index: 100;
 border-bottom: 1px solid var(--border);
 }
 
-.logo-img {
-    height: 50px;
-    width: auto;
-    display: block;
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-icon { font-size: 32px; color: #d63731; }
+.logo-text {
+font-size: 24px;
+font-family: 'Cormorant Garamond', serif;
+font-weight: 600;
+color: var(--text-dark);
+line-height: 1;
 }
-
-@media (max-width: 768px) {
-    .logo-img { height: 40px; }
+.logo-text small {
+display: block;
+font-size: 11px;
+color: var(--text-muted);
+letter-spacing: 2px;
+margin-top: 2px;
+font-family: 'Inter', sans-serif;
+font-weight: 400;
 }
 
 .nav-wrapper { display: flex; align-items: center; gap: 16px; }
@@ -378,15 +387,6 @@ margin-bottom: 50px;
 padding-bottom: 50px;
 border-bottom: 1px solid var(--border);
 }
-    .footer-logo {
-    height: 60px;
-    width: auto;
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .footer-logo { height: 50px; }
-}
 .footer-brand-name { font-size: 28px; font-family: 'Cormorant Garamond', serif; font-weight: 600; color: var(--text-dark); margin-bottom: 4px; }
 .footer-brand-name small { display: block; font-size: 11px; color: var(--text-muted); letter-spacing: 3px; margin-top: 4px; font-family: 'Inter', sans-serif; font-weight: 400; }
 .footer-about { color: var(--text-muted); font-size: 14px; line-height: 1.7; margin: 20px 0; }
@@ -493,8 +493,9 @@ footer { padding: 60px 0 30px; }
 
 <!-- HEADER -->
 <header class="main-header">
-<a href="/" class="logo">
-    <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778996615/c52aed3d-c26d-48f7-8ace-8bb74f971108_ve8ab0.png" alt="भजन लोक" class="logo-img">
+<a href="/en/" class="logo">
+<span class="logo-icon">ॐ</span>
+<div class="logo-text">Dharma Path<small>SANATAN DHARMA</small></div>
 </a>
 
 <div class="nav-wrapper">
@@ -503,38 +504,40 @@ footer { padding: 60px 0 30px; }
 <li><a href="/en/" class="home-icon-btn"><i class="fa-solid fa-house"></i></a></li>
 <li class="has-dropdown"><a href="/en/aarti/">Aarti</a>
 <ul class="dropdown">
-<li><a href="/en/aarti/hanuman/">Hanuman Aarti</a></li>
-<li><a href="/en/aarti/ganesh/">Ganesh Aarti</a></li>
-<li><a href="/en/aarti/shiv/">Shiv Aarti</a></li>
+<li><a href="/aarti/hanuman/">Hanuman Aarti</a></li>
+<li><a href="/aarti/ganesh/">Ganesh Aarti</a></li>
+<li><a href="/aarti/shiv/">Shiv Aarti</a></li>
 <li><a href="/en/aarti/">All Aartis →</a></li>
 </ul>
 </li>
 <li class="has-dropdown"><a href="/en/chalisa/">Chalisa</a>
 <ul class="dropdown">
-<li><a href="/en/chalisa/hanuman/">Hanuman Chalisa</a></li>
-<li><a href="/en/chalisa/durga/">Durga Chalisa</a></li>
+<li><a href="/chalisa/hanuman/">Hanuman Chalisa</a></li>
+<li><a href="/chalisa/durga/">Durga Chalisa</a></li>
 <li><a href="/en/chalisa/">All Chalisas →</a></li>
 </ul>
 </li>
 <li class="has-dropdown"><a href="/en/bhajan/">Bhajan</a>
 <ul class="dropdown">
-<li><a href="/en/bhajan/krishna/">Krishna Bhajan</a></li>
+<li><a href="/bhajan/krishna/">Krishna Bhajan</a></li>
 <li><a href="/en/bhajan/">All Bhajans →</a></li>
 </ul>
 </li>
 <li class="has-dropdown"><a href="/en/festivals/">Festivals</a>
 <ul class="dropdown">
-<li><a href="/en/festivals/diwali/">Diwali</a></li>
-<li><a href="/en/festivals/navratri/">Navratri</a></li>
+<li><a href="/festivals/diwali/">Diwali</a></li>
+<li><a href="/festivals/navratri/">Navratri</a></li>
 <li><a href="/en/festivals/">All Festivals →</a></li>
 </ul>
 </li>
 <li class="has-dropdown"><a href="/en/more/">More</a>
 <ul class="dropdown">
-<li><a href="/en/mantra/">Mantras</a></li>
-<li><a href="/en/stotra/">Stotras</a></li>
-<li><a href="/en/vrat-katha/">Vrat Katha</a></li>
 <li><a href="/en/temples/">Temples</a></li>
+<li><a href="/en/gods/">Deities</a></li>
+<li><a href="/en/vrat-katha/">Vrat Katha</a></li>
+<li><a href="/en/mantra/">Mantras/Shlokas</a></li>
+<li><a href="/en/stotra/">Stotras & Stutis</a></li>
+<li><a href="/en/blog/">Blog</a></li>
 </ul>
 </li>
 </ul>
@@ -553,23 +556,26 @@ footer { padding: 60px 0 30px; }
 <li class="mobile-has-sub">
 <a href="#" class="mobile-link" onclick="toggleMobileSub(this); return false;">Aarti <span class="arrow">▼</span></a>
 <ul class="mobile-submenu">
-<li><a href="/en/aarti/hanuman/">Hanuman Aarti</a></li>
-<li><a href="/en/aarti/ganesh/">Ganesh Aarti</a></li>
+<li><a href="/aarti/hanuman/">Hanuman Aarti</a></li>
+<li><a href="/aarti/ganesh/">Ganesh Aarti</a></li>
 <li><a href="/en/aarti/">All Aartis →</a></li>
 </ul>
 </li>
 <li class="mobile-has-sub">
 <a href="#" class="mobile-link" onclick="toggleMobileSub(this); return false;">Chalisa <span class="arrow">▼</span></a>
 <ul class="mobile-submenu">
-<li><a href="/en/chalisa/hanuman/">Hanuman Chalisa</a></li>
+<li><a href="/chalisa/hanuman/">Hanuman Chalisa</a></li>
 <li><a href="/en/chalisa/">All Chalisas →</a></li>
 </ul>
 </li>
 <li><a href="/en/bhajan/" class="mobile-link">Bhajan</a></li>
 <li><a href="/en/festivals/" class="mobile-link">Festivals</a></li>
-<li><a href="/en/mantra/" class="mobile-link">Mantras</a></li>
-<li><a href="/en/stotra/" class="mobile-link">Stotras</a></li>
+<li><a href="/en/temples/" class="mobile-link">Temples</a></li>
+<li><a href="/en/gods/" class="mobile-link">Deities</a></li>
 <li><a href="/en/vrat-katha/" class="mobile-link">Vrat Katha</a></li>
+<li><a href="/en/stotra/" class="mobile-link">Stotras & Stutis</a></li>
+<li><a href="/en/mantra/" class="mobile-link">Mantras & Shlokas</a></li>
+<li><a href="/en/blog/" class="mobile-link">Blog</a></li>
 </ul>
 </nav>
 
@@ -613,7 +619,7 @@ footer { padding: 60px 0 30px; }
 </div>
 
 <div class="collection-grid">
-<a href="/en/chalisa/hanuman/" class="collection-card">
+<a href="/chalisa/hanuman/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935472/fe411e082eda6a74abe20c9dd06cb777_kfwi98.jpg" alt="Hanuman Chalisa">
 <span class="card-tag">CHALISA</span>
 <div class="card-overlay">
@@ -623,7 +629,7 @@ footer { padding: 60px 0 30px; }
 </div>
 </a>
 
-<a href="/en/chalisa/bajrang-baan/" class="collection-card">
+<a href="/chalisa/bajrang-baan/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935472/a4c5ce1e8bab9d729ab39db0c2046869_onj2w5.jpg" alt="Bajrang Baan">
 <span class="card-tag">CHALISA</span>
 <div class="card-overlay">
@@ -633,7 +639,7 @@ footer { padding: 60px 0 30px; }
 </div>
 </a>
 
-<a href="/en/aarti/radha/" class="collection-card">
+<a href="/aarti/radha/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935471/1c1c74aa2bbd3f2ed7baaef32389ed9a_vrvsff.jpg" alt="Radha Aarti">
 <span class="card-tag">AARTI</span>
 <div class="card-overlay">
@@ -643,7 +649,7 @@ footer { padding: 60px 0 30px; }
 </div>
 </a>
 
-<a href="/en/stotra/jyotirling/" class="collection-card">
+<a href="/stotra/jyotirling/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935472/034e7d631d3537160b6190efd2c5f9a7_wssjha.jpg" alt="Jyotirling Stotra">
 <span class="card-tag">STOTRA</span>
 <div class="card-overlay">
@@ -653,7 +659,7 @@ footer { padding: 60px 0 30px; }
 </div>
 </a>
 
-<a href="/en/shlok/krishna-vasudevaya/" class="collection-card">
+<a href="/shlok/krishna-vasudevaya/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935471/535e5ad7a0354ede0bf1bf54bd682b9c_sgwleh.jpg" alt="Krishna Vasudevaya">
 <span class="card-tag">SHLOKA</span>
 <div class="card-overlay">
@@ -685,7 +691,7 @@ footer { padding: 60px 0 30px; }
 
 <!-- CHALISA CARDS -->
 <div class="collection-grid filter-group active" data-category="chalisa">
-<a href="/en/chalisa/shiv/" class="collection-card">
+<a href="/chalisa/shiv/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938786/428897a427e4c2e789b3a959766065e8_jwuedn.jpg" alt="Shiv Chalisa">
 <div class="card-overlay">
 <div class="card-title-en">Shiv Chalisa</div>
@@ -693,7 +699,7 @@ footer { padding: 60px 0 30px; }
 <div class="card-read-more">Read Now →</div>
 </div>
 </a>
-<a href="/en/chalisa/bhairav/" class="collection-card">
+<a href="/chalisa/bhairav/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937061/f5c392970d59a525dfb441845c301605_mn4zq4.jpg" alt="Bhairav Chalisa">
 <div class="card-overlay">
 <div class="card-title-en">Bhairav Chalisa</div>
@@ -701,7 +707,7 @@ footer { padding: 60px 0 30px; }
 <div class="card-read-more">Read Now →</div>
 </div>
 </a>
-<a href="/en/chalisa/durga/" class="collection-card">
+<a href="/chalisa/durga/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937061/67d47216d314bd33c5e40347be48cc93_r08flv.jpg" alt="Durga Chalisa">
 <div class="card-overlay">
 <div class="card-title-en">Durga Chalisa</div>
@@ -709,7 +715,7 @@ footer { padding: 60px 0 30px; }
 <div class="card-read-more">Read Now →</div>
 </div>
 </a>
-<a href="/en/chalisa/ganesh/" class="collection-card">
+<a href="/chalisa/ganesh/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937061/73b838689b40459b03a014d9c41a7f14_ot3jmh.jpg" alt="Ganesh Chalisa">
 <div class="card-overlay">
 <div class="card-title-en">Ganesh Chalisa</div>
@@ -717,7 +723,7 @@ footer { padding: 60px 0 30px; }
 <div class="card-read-more">Read Now →</div>
 </div>
 </a>
-<a href="/en/chalisa/ganga/" class="collection-card">
+<a href="/chalisa/ganga/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937061/9c5c864689a813c75ab69b22cc4ebf2f_mazynk.jpg" alt="Ganga Chalisa">
 <div class="card-overlay">
 <div class="card-title-en">Ganga Chalisa</div>
@@ -729,7 +735,7 @@ footer { padding: 60px 0 30px; }
 
 <!-- AARTI CARDS -->
 <div class="collection-grid filter-group" data-category="aarti" style="display:none;">
-<a href="/en/aarti/hanuman/" class="collection-card">
+<a href="/aarti/hanuman/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937366/7400ed8f9c0be8bc0b4fb445d20440a8_xplr8n.jpg" alt="Hanuman Aarti">
 <div class="card-overlay">
 <div class="card-title-en">Hanuman Aarti</div>
@@ -737,7 +743,7 @@ footer { padding: 60px 0 30px; }
 <div class="card-read-more">Read Now →</div>
 </div>
 </a>
-<a href="/en/aarti/krishna/" class="collection-card">
+<a href="/aarti/krishna/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937366/4bd271873c836e610c6b10b1166dd09c_sw0yyo.jpg" alt="Krishna Aarti">
 <div class="card-overlay">
 <div class="card-title-en">Krishna Aarti</div>
@@ -745,7 +751,7 @@ footer { padding: 60px 0 30px; }
 <div class="card-read-more">Read Now →</div>
 </div>
 </a>
-<a href="/en/aarti/shiv/" class="collection-card">
+<a href="/aarti/shiv/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937366/540865bfa0298dd49d85783e94e19ee2_fshkso.jpg" alt="Shiv Aarti">
 <div class="card-overlay">
 <div class="card-title-en">Shiv Aarti</div>
@@ -753,7 +759,7 @@ footer { padding: 60px 0 30px; }
 <div class="card-read-more">Read Now →</div>
 </div>
 </a>
-<a href="/en/aarti/ganesh/" class="collection-card">
+<a href="/aarti/ganesh/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937367/ec417381c72a40eaa4c2c755a70695ec_oso3ma.jpg" alt="Ganesh Aarti">
 <div class="card-overlay">
 <div class="card-title-en">Ganesh Aarti</div>
@@ -761,7 +767,7 @@ footer { padding: 60px 0 30px; }
 <div class="card-read-more">Read Now →</div>
 </div>
 </a>
-<a href="/en/aarti/durga/" class="collection-card">
+<a href="/aarti/durga/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937366/b22d611884d29c4f71c1d95a753d5029_kd7xhh.jpg" alt="Durga Aarti">
 <div class="card-overlay">
 <div class="card-title-en">Durga Aarti</div>
@@ -773,7 +779,7 @@ footer { padding: 60px 0 30px; }
 
 <!-- STOTRA CARDS -->
 <div class="collection-grid filter-group" data-category="stotra" style="display:none;">
-<a href="/en/stotra/jyotirling/" class="collection-card">
+<a href="/stotra/jyotirling/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935472/034e7d631d3537160b6190efd2c5f9a7_wssjha.jpg" alt="Jyotirling Stotra">
 <div class="card-overlay">
 <div class="card-title-en">Dwadash Jyotirling</div>
@@ -781,7 +787,7 @@ footer { padding: 60px 0 30px; }
 <div class="card-read-more">Read Now →</div>
 </div>
 </a>
-<a href="/en/stotra/lingashtakam/" class="collection-card">
+<a href="/stotra/lingashtakam/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938076/aaa9c2ba980b973f735b0803fe36362f_ftvxgl.jpg" alt="Lingashtakam">
 <div class="card-overlay">
 <div class="card-title-en">Lingashtakam</div>
@@ -789,7 +795,7 @@ footer { padding: 60px 0 30px; }
 <div class="card-read-more">Read Now →</div>
 </div>
 </a>
-<a href="/en/stotra/vishnu-sahasranama/" class="collection-card">
+<a href="/stotra/vishnu-sahasranama/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938075/04ef5697ddd17c3a93f8d4345e6110e1_zabqql.jpg" alt="Vishnu Sahasranama">
 <div class="card-overlay">
 <div class="card-title-en">Vishnu Sahasranama</div>
@@ -797,7 +803,7 @@ footer { padding: 60px 0 30px; }
 <div class="card-read-more">Read Now →</div>
 </div>
 </a>
-<a href="/en/stotra/aditya-hridayam/" class="collection-card">
+<a href="/stotra/aditya-hridayam/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938075/47ef2779c2367cb993588606b994c829_scx5hk.jpg" alt="Aditya Hridayam">
 <div class="card-overlay">
 <div class="card-title-en">Aditya Hridayam</div>
@@ -805,7 +811,7 @@ footer { padding: 60px 0 30px; }
 <div class="card-read-more">Read Now →</div>
 </div>
 </a>
-<a href="/en/stotra/durga-saptashati/" class="collection-card">
+<a href="/stotra/durga-saptashati/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938076/789cf582ef8c65fe95977446938e0127_udzqta.jpg" alt="Durga Saptashati">
 <div class="card-overlay">
 <div class="card-title-en">Durga Saptashati</div>
@@ -817,7 +823,7 @@ footer { padding: 60px 0 30px; }
 
 <!-- SHLOK CARDS -->
 <div class="collection-grid filter-group" data-category="shlok" style="display:none;">
-<a href="/en/shlok/krishna-vasudevaya/" class="collection-card">
+<a href="/shlok/krishna-vasudevaya/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938379/dbbcc5a5681637881f49415363b61ec3_wnlldv.jpg" alt="Krishna Vasudevaya">
 <div class="card-overlay">
 <div class="card-title-en">Krishna Vasudevaya</div>
@@ -825,7 +831,7 @@ footer { padding: 60px 0 30px; }
 <div class="card-read-more">Read Now →</div>
 </div>
 </a>
-<a href="/en/shlok/gayatri-mantra/" class="collection-card">
+<a href="/shlok/gayatri-mantra/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938378/045317131a329fa3c8d26247f7d0725c_dnpbxl.jpg" alt="Gayatri Mantra">
 <div class="card-overlay">
 <div class="card-title-en">Gayatri Mantra</div>
@@ -833,7 +839,7 @@ footer { padding: 60px 0 30px; }
 <div class="card-read-more">Read Now →</div>
 </div>
 </a>
-<a href="/en/shlok/mahamrityunjaya/" class="collection-card">
+<a href="/shlok/mahamrityunjaya/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938377/96caf9a48981cad871f7fbcfa54eedbd_jkbdgs.jpg" alt="Mahamrityunjaya">
 <div class="card-overlay">
 <div class="card-title-en">Mahamrityunjaya Mantra</div>
@@ -841,7 +847,7 @@ footer { padding: 60px 0 30px; }
 <div class="card-read-more">Read Now →</div>
 </div>
 </a>
-<a href="/en/shlok/karagre-vasate/" class="collection-card">
+<a href="/shlok/karagre-vasate/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938379/bbd3101aba7657b5264cb5fbc55e74e0_kdv1th.jpg" alt="Karagre Vasate">
 <div class="card-overlay">
 <div class="card-title-en">Karagre Vasate Lakshmi</div>
@@ -849,7 +855,7 @@ footer { padding: 60px 0 30px; }
 <div class="card-read-more">Read Now →</div>
 </div>
 </a>
-<a href="/en/shlok/twameva-mata/" class="collection-card">
+<a href="/shlok/twameva-mata/" class="collection-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938380/e1c2f758f9610659c3189c8da908e6c2_sl0bi8.jpg" alt="Twameva Mata">
 <div class="card-overlay">
 <div class="card-title-en">Twameva Mata Cha Pita</div>
@@ -872,7 +878,7 @@ footer { padding: 60px 0 30px; }
 </div>
 
 <div class="deity-grid">
-<a href="/en/deity/radha/" class="deity-card">
+<a href="/deity/radha/" class="deity-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778939002/f05f485e2e9fe8389f8e1594383ecce4_weflpg.jpg" alt="Radha">
 <div class="deity-overlay">
 <div class="deity-name">Radha</div>
@@ -880,7 +886,7 @@ footer { padding: 60px 0 30px; }
 <div class="deity-read">Read Now →</div>
 </div>
 </a>
-<a href="/en/deity/shiv/" class="deity-card">
+<a href="/deity/shiv/" class="deity-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937061/20d89b10b4dc6b1c603621dd86d246d9_bevbhi.jpg" alt="Shiva">
 <div class="deity-overlay">
 <div class="deity-name">Shiva</div>
@@ -888,7 +894,7 @@ footer { padding: 60px 0 30px; }
 <div class="deity-read">Read Now →</div>
 </div>
 </a>
-<a href="/en/deity/krishna/" class="deity-card">
+<a href="/deity/krishna/" class="deity-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778939002/3619372184ab779480e545a19b0169c3_ezbko4.jpg" alt="Krishna">
 <div class="deity-overlay">
 <div class="deity-name">Krishna</div>
@@ -896,7 +902,7 @@ footer { padding: 60px 0 30px; }
 <div class="deity-read">Read Now →</div>
 </div>
 </a>
-<a href="/en/deity/hanuman/" class="deity-card">
+<a href="/deity/hanuman/" class="deity-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778939002/74f1f1ed10f394f30645b11c6da95791_nvyjgm.jpg" alt="Hanuman">
 <div class="deity-overlay">
 <div class="deity-name">Hanuman</div>
@@ -904,7 +910,7 @@ footer { padding: 60px 0 30px; }
 <div class="deity-read">Read Now →</div>
 </div>
 </a>
-<a href="/en/deity/ganesh/" class="deity-card">
+<a href="/deity/ganesh/" class="deity-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778939001/5ac2d60191f43a0ef5249a754c4056b0_a6tybz.jpg" alt="Ganesh">
 <div class="deity-overlay">
 <div class="deity-name">Ganesh</div>
@@ -927,7 +933,7 @@ footer { padding: 60px 0 30px; }
 </div>
 
 <div class="festival-grid">
-<a href="/en/festivals/raksha-bandhan/" class="festival-card">
+<a href="/festivals/raksha-bandhan/" class="festival-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778940213/60a1a2729114497fb0814730f5213391_seiosk.jpg" alt="Raksha Bandhan">
 <div class="festival-overlay">
 <div class="festival-name">Raksha Bandhan</div>
@@ -935,7 +941,7 @@ footer { padding: 60px 0 30px; }
 <div class="festival-read">Read Now →</div>
 </div>
 </a>
-<a href="/en/festivals/janmashtami/" class="festival-card">
+<a href="/festivals/janmashtami/" class="festival-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778940214/b9ba7178986de56d4c6353197753bf2e_xp2g4s.jpg" alt="Janmashtami">
 <div class="festival-overlay">
 <div class="festival-name">Janmashtami</div>
@@ -943,7 +949,7 @@ footer { padding: 60px 0 30px; }
 <div class="festival-read">Read Now →</div>
 </div>
 </a>
-<a href="/en/festivals/ganesh-chaturthi/" class="festival-card">
+<a href="/festivals/ganesh-chaturthi/" class="festival-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778940214/ce93a8ef7b938b741222ec61e9977e1e_fg25w5.jpg" alt="Ganesh Chaturthi">
 <div class="festival-overlay">
 <div class="festival-name">Ganesh Chaturthi</div>
@@ -951,7 +957,7 @@ footer { padding: 60px 0 30px; }
 <div class="festival-read">Read Now →</div>
 </div>
 </a>
-<a href="/en/festivals/navratri/" class="festival-card">
+<a href="/festivals/navratri/" class="festival-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778940214/e10317a45b5505d00a672751610f08de_eft2kk.jpg" alt="Navratri">
 <div class="festival-overlay">
 <div class="festival-name">Navratri</div>
@@ -959,7 +965,7 @@ footer { padding: 60px 0 30px; }
 <div class="festival-read">Read Now →</div>
 </div>
 </a>
-<a href="/en/festivals/dussehra/" class="festival-card">
+<a href="/festivals/dussehra/" class="festival-card">
 <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778940212/03b0e30381450457c3f3c578eb5cd2fc_h2trn4.jpg" alt="Dussehra">
 <div class="festival-overlay">
 <div class="festival-name">Dussehra</div>
@@ -982,7 +988,7 @@ footer { padding: 60px 0 30px; }
 </div>
 
 <div class="blog-grid">
-<a href="/en/blog/hanuman-chalisa-benefits/" class="blog-card">
+<a href="/blog/hanuman-chalisa-benefits/" class="blog-card">
 <div class="blog-image">
 <img src="https://www.dharmapath.in/_next/image?url=%2Fimages%2Fchalisa%2Fhanuman_chalisa_devotional.png&w=1080&q=75" alt="Hanuman Chalisa">
 </div>
@@ -997,7 +1003,7 @@ footer { padding: 60px 0 30px; }
 </div>
 </a>
 
-<a href="/en/blog/ram-naam-jap/" class="blog-card">
+<a href="/blog/ram-naam-jap/" class="blog-card">
 <div class="blog-image">
 <img src="https://www.dharmapath.in/_next/image?url=%2Fimages%2Fchalisa%2Fhanuman_chalisa_devotional.png&w=1080&q=75" alt="Ram Naam Jap">
 </div>
@@ -1012,7 +1018,7 @@ footer { padding: 60px 0 30px; }
 </div>
 </a>
 
-<a href="/en/blog/jap-kaise-ginen/" class="blog-card">
+<a href="/blog/jap-kaise-ginen/" class="blog-card">
 <div class="blog-image">
 <img src="https://www.dharmapath.in/_next/image?url=%2Fimages%2Fchalisa%2Fhanuman_chalisa_devotional.png&w=1080&q=75" alt="How to Count Jap">
 </div>
@@ -1050,8 +1056,9 @@ footer { padding: 60px 0 30px; }
 <div class="footer-grid">
 
 <div>
-<div style="margin-bottom: 16px;">
-    <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778996615/c52aed3d-c26d-48f7-8ace-8bb74f971108_ve8ab0.png" alt="भजन लोक" class="footer-logo">
+<div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+<span style="font-size:36px; color:#d63731;">ॐ</span>
+<div><div class="footer-brand-name">Dharma Path<small>SANATAN DHARMA</small></div></div>
 </div>
 <p class="footer-about">A spiritual platform dedicated to bringing the sacred traditions of Sanatan culture to every devotee in a simple, beautiful and digital form.</p>
 </div>
@@ -1070,33 +1077,33 @@ footer { padding: 60px 0 30px; }
 <div>
 <h4 class="footer-col-title">Aarti</h4>
 <ul class="footer-links">
-<li><a href="/en/aarti/ganesh/">Ganesh Aarti</a></li>
-<li><a href="/en/aarti/krishna/">Krishna Aarti</a></li>
-<li><a href="/en/aarti/durga/">Durga Aarti</a></li>
-<li><a href="/en/aarti/hanuman/">Hanuman Aarti</a></li>
-<li><a href="/en/aarti/ram/">Ram Aarti</a></li>
+<li><a href="/aarti/ganesh/">Ganesh Aarti</a></li>
+<li><a href="/aarti/krishna/">Krishna Aarti</a></li>
+<li><a href="/aarti/durga/">Durga Aarti</a></li>
+<li><a href="/aarti/hanuman/">Hanuman Aarti</a></li>
+<li><a href="/aarti/ram/">Ram Aarti</a></li>
 </ul>
 </div>
 
 <div>
 <h4 class="footer-col-title">Chalisa</h4>
 <ul class="footer-links">
-<li><a href="/en/chalisa/hanuman/">Hanuman Chalisa</a></li>
-<li><a href="/en/chalisa/ram/">Ram Chalisa</a></li>
-<li><a href="/en/chalisa/durga/">Durga Chalisa</a></li>
-<li><a href="/en/chalisa/shiv/">Shiv Chalisa</a></li>
-<li><a href="/en/chalisa/vishnu/">Vishnu Chalisa</a></li>
+<li><a href="/chalisa/hanuman/">Hanuman Chalisa</a></li>
+<li><a href="/chalisa/ram/">Ram Chalisa</a></li>
+<li><a href="/chalisa/durga/">Durga Chalisa</a></li>
+<li><a href="/chalisa/shiv/">Shiv Chalisa</a></li>
+<li><a href="/chalisa/vishnu/">Vishnu Chalisa</a></li>
 </ul>
 </div>
 
 <div>
 <h4 class="footer-col-title">Deities</h4>
 <ul class="footer-links">
-<li><a href="/en/deity/ganesh/">Ganesh</a></li>
-<li><a href="/en/deity/ram/">Ram</a></li>
-<li><a href="/en/deity/hanuman/">Hanuman</a></li>
-<li><a href="/en/deity/vishnu/">Vishnu</a></li>
-<li><a href="/en/deity/durga/">Durga</a></li>
+<li><a href="/deity/ganesh/">Ganesh</a></li>
+<li><a href="/deity/ram/">Ram</a></li>
+<li><a href="/deity/hanuman/">Hanuman</a></li>
+<li><a href="/deity/vishnu/">Vishnu</a></li>
+<li><a href="/deity/durga/">Durga</a></li>
 </ul>
 </div>
 
