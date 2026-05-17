@@ -384,66 +384,97 @@ border-bottom: 1px solid var(--border);
 <body>
 
 <div class="top-bar">
-🙏 हमारी वेबसाइट पर पधारने के लिए आपका धन्यवाद - हमारा प्रयास एक भक्त को भगवान से जोड़े रखना है 🙏
+    🙏 Thank you for visiting our website - Our mission is to keep every devotee connected with the divine 🙏
 </div>
 
+<!-- HEADER -->
 <header class="main-header">
-<a href="/" class="logo">
-    <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778996615/c52aed3d-c26d-48f7-8ace-8bb74f971108_ve8ab0.png" alt="भजन लोक" class="logo-img">
+<a href="/en/" class="logo">
+<img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778996615/c52aed3d-c26d-48f7-8ace-8bb74f971108_ve8ab0.png" alt="Bhajan Lok" class="logo-img">
 </a>
 
 <div class="nav-wrapper">
 <nav>
 <ul class="nav-menu">
-<li><a href="/" class="home-icon-btn"><i class="fa-solid fa-house"></i></a></li>
-<li class="has-dropdown">
-<a href="/aarti/">आरती</a>
+<li><a href="/en/" class="home-icon-btn"><i class="fa-solid fa-house"></i></a></li>
+<li class="has-dropdown"><a href="/en/aarti/">Aarti</a>
 <ul class="dropdown">
-<li><a href="/aarti/hanuman/">हनुमान आरती</a></li>
-<li><a href="/aarti/ganesh/">गणेश आरती</a></li>
-<li><a href="/aarti/shiv/">शिव आरती</a></li>
-<li><a href="/aarti/">सभी आरती →</a></li>
+<li><a href="/aarti/hanuman/">Hanuman Aarti</a></li>
+<li><a href="/aarti/ganesh/">Ganesh Aarti</a></li>
+<li><a href="/aarti/shiv/">Shiv Aarti</a></li>
+<li><a href="/en/aarti/">All Aartis →</a></li>
 </ul>
 </li>
-<li class="has-dropdown">
-<a href="/chalisa/">चालीसा</a>
+<li class="has-dropdown"><a href="/en/chalisa/">Chalisa</a>
 <ul class="dropdown">
-<li><a href="/chalisa/hanuman/">हनुमान चालीसा</a></li>
-<li><a href="/chalisa/durga/">दुर्गा चालीसा</a></li>
-<li><a href="/chalisa/">सभी चालीसा →</a></li>
+<li><a href="/chalisa/hanuman/">Hanuman Chalisa</a></li>
+<li><a href="/chalisa/durga/">Durga Chalisa</a></li>
+<li><a href="/en/chalisa/">All Chalisas →</a></li>
 </ul>
 </li>
-<li class="has-dropdown">
-<a href="/bhajan/">भजन</a>
+<li class="has-dropdown"><a href="/en/bhajan/">Bhajan</a>
 <ul class="dropdown">
-<li><a href="/bhajan/krishna/">कृष्ण भजन</a></li>
-<li><a href="/bhajan/">सभी भजन →</a></li>
+<li><a href="/bhajan/krishna/">Krishna Bhajan</a></li>
+<li><a href="/en/bhajan/">All Bhajans →</a></li>
 </ul>
 </li>
-<li class="has-dropdown">
-<a href="/tyohar/">त्योहार</a>
+<li class="has-dropdown"><a href="/en/festivals/">Festivals</a>
 <ul class="dropdown">
-<li><a href="/tyohar/diwali/">दीवाली</a></li>
-<li><a href="/tyohar/navratri/">नवरात्रि</a></li>
-<li><a href="/tyohar/">सभी त्योहार →</a></li>
+<li><a href="/festivals/diwali/">Diwali</a></li>
+<li><a href="/festivals/navratri/">Navratri</a></li>
+<li><a href="/en/festivals/">All Festivals →</a></li>
 </ul>
 </li>
-<li class="has-dropdown">
-<a href="/anya/">अन्य</a>
+<li class="has-dropdown"><a href="/en/more/">More</a>
 <ul class="dropdown">
-<li><a href="/temples/">मंदिर</a></li>
-<li><a href="/gods/">देवता</a></li>
-<li><a href="/vrat-katha/">व्रत कथा</a></li>
-<li><a href="/mantra/">मंत्र/श्लोक</a></li>
-<li><a href="/stotra/">स्तोत्र और स्तुति</a></li>
-<li><a href="/blog/">ब्लॉग</a></li>
+<li><a href="/en/temples/">Temples</a></li>
+<li><a href="/en/gods/">Deities</a></li>
+<li><a href="/en/vrat-katha/">Vrat Katha</a></li>
+<li><a href="/en/mantra/">Mantras/Shlokas</a></li>
+<li><a href="/en/stotra/">Stotras & Stutis</a></li>
+<li><a href="/en/blog/">Blog</a></li>
 </ul>
 </li>
 </ul>
 </nav>
 
-<button class="lang-toggle" onclick="window.location.href='/en/aarti/'">🌐 EN</button>
+<button class="lang-toggle" onclick="window.location.href='/'">🌐 हिं</button>
 <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+</div>
+</header>
+
+<div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
+<nav class="mobile-nav" id="mobileNav">
+<button class="mobile-nav-close" onclick="toggleMobileMenu()">✕</button>
+<ul class="mobile-menu-list">
+<li><a href="/en/" class="mobile-link"><i class="fa-solid fa-house"></i> Home</a></li>
+<li class="mobile-has-sub">
+<a href="#" class="mobile-link" onclick="toggleMobileSub(this); return false;">Aarti <span class="arrow">▼</span></a>
+<ul class="mobile-submenu">
+<li><a href="/aarti/hanuman/">Hanuman Aarti</a></li>
+<li><a href="/aarti/ganesh/">Ganesh Aarti</a></li>
+<li><a href="/en/aarti/">All Aartis →</a></li>
+</ul>
+</li>
+<li class="mobile-has-sub">
+<a href="#" class="mobile-link" onclick="toggleMobileSub(this); return false;">Chalisa <span class="arrow">▼</span></a>
+<ul class="mobile-submenu">
+<li><a href="/chalisa/hanuman/">Hanuman Chalisa</a></li>
+<li><a href="/en/chalisa/">All Chalisas →</a></li>
+</ul>
+</li>
+<li><a href="/en/bhajan/" class="mobile-link">Bhajan</a></li>
+<li><a href="/en/festivals/" class="mobile-link">Festivals</a></li>
+<li><a href="/en/temples/" class="mobile-link">Temples</a></li>
+<li><a href="/en/gods/" class="mobile-link">Deities</a></li>
+<li><a href="/en/vrat-katha/" class="mobile-link">Vrat Katha</a></li>
+<li><a href="/en/stotra/" class="mobile-link">Stotras & Stutis</a></li>
+<li><a href="/en/mantra/" class="mobile-link">Mantras & Shlokas</a></li>
+<li><a href="/en/blog/" class="mobile-link">Blog</a></li>
+</ul>
+</nav>
+<button class="lang-toggle" onclick="window.location.href='/gods/'">🌐 हिं</button>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
 </div>
 </header>
 
