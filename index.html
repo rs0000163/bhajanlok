@@ -3,402 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>धर्म पथ - सनातन धर्म</title>
 
+<!-- ============ SEO META (Hindi homepage) ============ -->
+<title>भजन लोक - सनातन ज्ञान का दिव्य संग्रह | आरती, चालीसा, भजन, मंत्र</title>
+<meta name="description" content="भजन लोक पर पढ़ें श्री हनुमान चालीसा, सभी देवताओं की आरती, भक्ति भजन, मंत्र, स्तोत्र और त्योहारों की महिमा। सनातन धर्म का सरल और सुंदर डिजिटल संग्रह।">
+<meta name="keywords" content="भजन लोक, हनुमान चालीसा, आरती, चालीसा, भजन, मंत्र, स्तोत्र, सनातन धर्म, हिंदू त्योहार">
+<meta name="author" content="Bhajan Lok">
+<meta name="language" content="Hindi">
 
-<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Open Graph (for WhatsApp / Facebook previews) -->
+<meta property="og:title" content="भजन लोक - सनातन ज्ञान का दिव्य संग्रह">
+<meta property="og:description" content="आरती, चालीसा, भजन, मंत्र और त्योहारों का संपूर्ण आध्यात्मिक संग्रह।">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="hi_IN">
+<meta property="og:url" content="https://bhajanlok.in/">
 
+<!-- Tell search engines an English version exists (when you launch en. subdomain) -->
+<link rel="alternate" hreflang="hi" href="https://bhajanlok.in/">
+<link rel="alternate" hreflang="en" href="https://en.bhajanlok.in/">
+<link rel="alternate" hreflang="x-default" href="https://bhajanlok.in/">
+
+<!-- ============ FAVICON ============ -->
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/ddf8equjt/image/upload/v1779356012/0dd8ac07-a4e4-4e59-8945-90da664afa82_gs8mb2.png">
+<link rel="apple-touch-icon" href="https://res.cloudinary.com/ddf8equjt/image/upload/v1779356012/0dd8ac07-a4e4-4e59-8945-90da664afa82_gs8mb2.png">
 
 <style>
+/* ============ GLOBAL RESET + VARIABLES ============ */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-
 :root {
---primary: #1a2332;
---accent: #c89853;
---text-dark: #1a2332;
---text-muted: #6b7280;
---bg-cream: #faf8f3;
---bg-light: #ffffff;
---border: #e5e0d3;
+    --primary: #1a2332;
+    --accent: #c89853;
+    --text-dark: #1a2332;
+    --text-muted: #6b7280;
+    --bg-cream: #faf8f3;
+    --bg-light: #ffffff;
+    --border: #e5e0d3;
 }
-
 
 body {
-font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
-background: var(--bg-cream);
-color: var(--text-dark);
-line-height: 1.6;
+    font-family: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+    background: var(--bg-cream);
+    color: var(--text-dark);
+    line-height: 1.6;
 }
-
 
 h1, h2, h3, .serif {
-font-family: 'Tiro Devanagari Hindi', 'Noto Sans Devanagari', serif;
-font-weight: 400;
+    font-family: 'Tiro Devanagari Hindi', 'Noto Sans Devanagari', serif;
+    font-weight: 400;
 }
-
 
 .container {
-max-width: 1280px;
-margin: 0 auto;
-padding: 0 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
-  
-/* TOP ANNOUNCEMENT BAR */
-.top-bar {
-    background: #fde8c9;
-    color: #8a4a0a;
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: 'Mukta', sans-serif;
-}
-
-@media (max-width: 768px) {
-    .top-bar { font-size: 12px; padding: 8px 16px; }
-}
-
-/* ============ HEADER ============ */
-.main-header {
-background: rgba(250, 248, 243, 0.95);
-backdrop-filter: blur(10px);
-padding: 18px 40px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-position: sticky;
-top: 0;
-z-index: 100;
-border-bottom: 1px solid var(--border);
-}
-
-
-.logo-img {
-    height: 50px;
-    width: auto;
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .logo-img { height: 40px; }
-}
-.nav-wrapper {
-display: flex;
-align-items: center;
-gap: 16px;
-}
-
-
-.nav-menu {
-display: flex;
-gap: 4px;
-list-style: none;
-align-items: center;
-}
-
-
-.nav-menu > li {
-position: relative;
-}
-
-
-.nav-menu > li > a {
-display: block;
-padding: 10px 16px;
-color: var(--text-dark);
-text-decoration: none;
-font-size: 16px;
-font-weight: 500;
-transition: color 0.3s;
-}
-
-
-.nav-menu > li > a:hover {
-color: var(--accent);
-}
-
-
-.home-icon-btn {
-font-size: 20px !important;
-padding: 10px 12px !important;
-}
-
-
-.has-dropdown > a::after {
-content: ' ▾';
-font-size: 12px;
-margin-left: 2px;
-}
-
-
-.dropdown {
-position: absolute;
-top: 100%;
-left: 0;
-background: white;
-min-width: 220px;
-box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-border-radius: 8px;
-list-style: none;
-padding: 8px 0;
-opacity: 0;
-visibility: hidden;
-transform: translateY(10px);
-transition: all 0.3s;
-border: 1px solid var(--border);
-}
-
-
-.has-dropdown:hover .dropdown {
-opacity: 1;
-visibility: visible;
-transform: translateY(0);
-}
-
-
-.dropdown li a {
-display: block;
-padding: 10px 20px;
-color: var(--text-dark);
-text-decoration: none;
-font-size: 15px;
-}
-
-
-.dropdown li a:hover {
-background: var(--bg-cream);
-color: var(--accent);
-}
-
-
-/* SEARCH */
-.search-container {
-display: flex;
-align-items: center;
-}
-
-
-.search-btn {
-background: transparent;
-border: 1px solid var(--border);
-width: 42px;
-height: 42px;
-border-radius: 50%;
-color: var(--text-dark);
-font-size: 16px;
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
-transition: all 0.3s;
-flex-shrink: 0;
-}
-
-
-.search-btn:hover {
-background: var(--text-dark);
-color: white;
-}
-
-
-.search-container.active .search-btn {
-width: 0;
-opacity: 0;
-visibility: hidden;
-margin: 0;
-padding: 0;
-overflow: hidden;
-transition: all 0.3s ease;
-}
-
-
-.search-btn { transition: all 0.3s ease; }
-
-
-.search-box {
-width: 0;
-opacity: 0;
-visibility: hidden;
-background: white;
-border: 1px solid var(--text-dark);
-border-radius: 25px;
-padding: 0;
-display: flex;
-align-items: center;
-transition: width 0.4s ease, opacity 0.3s ease 0.1s, padding 0.4s ease, margin 0.4s ease;
-overflow: hidden;
-margin-left: 0;
-}
-
-
-.search-box.active {
-width: 280px;
-opacity: 1;
-visibility: visible;
-padding: 0 16px;
-margin-left: 12px;
-}
-
-
-.search-box input {
-flex: 1;
-border: none;
-outline: none;
-padding: 8px;
-font-size: 14px;
-font-family: inherit;
-background: transparent;
-min-width: 0;
-}
-
-
-.search-box .close-btn {
-background: transparent;
-border: none;
-color: var(--text-muted);
-font-size: 16px;
-cursor: pointer;
-padding: 6px;
-flex-shrink: 0;
-}
-
-
-/* LANGUAGE TOGGLE */
-.lang-toggle {
-background: transparent;
-border: 1px solid var(--border);
-padding: 8px 16px;
-border-radius: 20px;
-color: var(--text-dark);
-font-size: 14px;
-font-weight: 500;
-cursor: pointer;
-display: flex;
-align-items: center;
-gap: 6px;
-transition: all 0.3s;
-}
-
-
-.lang-toggle:hover {
-background: var(--text-dark);
-color: white;
-border-color: var(--text-dark);
-}
-
-
-/* MOBILE MENU */
-.mobile-menu-btn {
-display: none;
-background: none;
-border: none;
-font-size: 26px;
-cursor: pointer;
-color: var(--text-dark);
-}
-
-
-.mobile-nav {
-position: fixed;
-top: 0;
-left: 0;
-width: 85%;
-max-width: 320px;
-height: 100vh;
-background: white;
-z-index: 200;
-transform: translateX(-100%);
-transition: transform 0.3s ease;
-overflow-y: auto;
-padding: 20px;
-box-shadow: 4px 0 20px rgba(0,0,0,0.1);
-}
-
-
-.mobile-nav.active { transform: translateX(0); }
-
-
-.mobile-nav-overlay {
-display: none;
-position: fixed;
-top: 0; left: 0;
-width: 100%; height: 100vh;
-background: rgba(0,0,0,0.5);
-z-index: 150;
-}
-
-
-.mobile-nav-overlay.active { display: block; }
-
-
-.mobile-nav-close {
-background: none;
-border: none;
-font-size: 26px;
-color: var(--text-dark);
-cursor: pointer;
-margin-bottom: 20px;
-}
-
-
-.mobile-menu-list { list-style: none; }
-
-
-.mobile-menu-list > li {
-border-bottom: 1px solid var(--border);
-}
-
-
-.mobile-link {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 15px 10px;
-color: var(--text-dark);
-text-decoration: none;
-font-size: 17px;
-font-weight: 500;
-cursor: pointer;
-}
-
-
-.mobile-link .arrow {
-font-size: 11px;
-transition: transform 0.3s;
-}
-
-
-.mobile-has-sub.open .arrow {
-transform: rotate(180deg);
-color: var(--accent);
-}
-
-
-.mobile-submenu {
-max-height: 0;
-overflow: hidden;
-background: var(--bg-cream);
-transition: max-height 0.3s;
-list-style: none;
-}
-
-
-.mobile-has-sub.open .mobile-submenu { max-height: 500px; }
-
-
-.mobile-submenu li a {
-display: block;
-padding: 12px 25px;
-color: var(--text-muted);
-text-decoration: none;
-font-size: 15px;
-}
-
-
-.mobile-submenu li a:hover { color: var(--accent); }
-
 
 /* ============ HERO SECTION ============ */
 .hero {
@@ -408,92 +67,68 @@ font-size: 15px;
     gap: 60px;
     align-items: center;
 }
-
 .hero-badge {
-display: inline-block;
-padding: 8px 20px;
-border: 1px solid var(--border);
-border-radius: 30px;
-font-size: 14px;
-color: var(--text-muted);
-margin-bottom: 24px;
-letter-spacing: 2px;
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    letter-spacing: 2px;
 }
-
-
 .hero-mantra {
-color: var(--accent);
-font-size: 17px;
-margin-bottom: 24px;
-letter-spacing: 3px;
-font-family: 'Tiro Devanagari Hindi', serif;
+    color: var(--accent);
+    font-size: 17px;
+    margin-bottom: 24px;
+    letter-spacing: 3px;
+    font-family: 'Tiro Devanagari Hindi', serif;
 }
-
-
 .hero h1 {
-font-size: 64px;
-line-height: 1.15;
-margin-bottom: 24px;
-color: var(--text-dark);
+    font-size: 64px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    color: var(--text-dark);
 }
-
-
 .hero-desc {
-font-size: 17px;
-line-height: 1.8;
-color: var(--text-muted);
-margin-bottom: 32px;
-max-width: 480px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    max-width: 480px;
 }
-
-
 .hero-categories {
-display: flex;
-gap: 12px;
-margin-bottom: 32px;
-flex-wrap: wrap;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
 }
-
-
 .hero-cat-pill {
-background: white;
-border: 1px solid var(--border);
-border-radius: 50px;
-padding: 14px 24px;
-display: flex;
-align-items: center;
-gap: 10px;
-text-decoration: none;
-color: var(--text-dark);
-transition: all 0.3s;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: all 0.3s;
 }
-
-
 .hero-cat-pill:hover {
-border-color: var(--accent);
-transform: translateY(-2px);
+    border-color: var(--accent);
+    transform: translateY(-2px);
 }
-
-
 .pill-dot {
-width: 8px;
-height: 8px;
-background: var(--accent);
-border-radius: 50%;
-display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: inline-block;
 }
-
-
 .pill-text { display: flex; flex-direction: column; }
-.pill-title {
-font-weight: 600;
-font-size: 15px;
-}
-.pill-subtitle {
-font-size: 12px;
-color: var(--text-muted);
-}
-
+.pill-title { font-weight: 600; font-size: 15px; }
+.pill-subtitle { font-size: 12px; color: var(--text-muted); }
 
 .hero-image {
     border-radius: 20px;
@@ -502,1704 +137,964 @@ color: var(--text-muted);
     aspect-ratio: 1/1;
     width: 100%;
 }
-
 .hero-image img,
 .hero-image video {
-width: 100%;
-height: 100%;
-object-fit: cover;
-display: block;
-}
-
-
-/* ============ SECTION STYLES ============ */
-.section {
-padding: 20px 0;
-}
-
-
-.section-tag {
-display: inline-block;
-font-size: 12px;
-letter-spacing: 4px;
-color: var(--text-muted);
-margin-bottom: 24px;
-position: relative;
-padding-left: 40px;
-}
-
-
-.section-tag::before {
-content: '';
-position: absolute;
-left: 0;
-top: 50%;
-width: 30px;
-height: 1px;
-background: var(--text-muted);
-}
-
-
-.section-header {
-display: flex;
-justify-content: space-between;
-align-items: flex-end;
-margin-bottom: 60px;
-gap: 40px;
-}
-
-
-.section-header-left { flex: 1; }
-
-
-.section-title {
-font-size: 56px;
-line-height: 1.2;
-color: var(--text-dark);
-margin-bottom: 16px;
-}
-
-
-.section-desc {
-font-size: 17px;
-color: var(--text-muted);
-max-width: 600px;
-line-height: 1.7;
-}
-
-
-.view-all-btn {
-background: white;
-border: 1px solid var(--border);
-padding: 14px 28px;
-border-radius: 50px;
-color: var(--text-dark);
-text-decoration: none;
-font-size: 15px;
-font-weight: 500;
-display: inline-flex;
-align-items: center;
-gap: 8px;
-transition: all 0.3s;
-white-space: nowrap;
-flex-shrink: 0;
-}
-
-
-.view-all-btn:hover {
-background: var(--text-dark);
-color: white;
-border-color: var(--text-dark);
-}
-
-
-/* ============ COLLECTION CARDS (Popular Collection) ============ */
-.collection-grid {
-display: grid;
-grid-template-columns: repeat(5, 1fr);
-gap: 20px;
-}
-
-
-.collection-card {
-position: relative;
-aspect-ratio: 3/4;
-border-radius: 16px;
-overflow: hidden;
-cursor: pointer;
-text-decoration: none;
-color: white;
-transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease;
-display: block;
-}
-
-
-.collection-card:hover {
-transform: translateY(-8px) scale(1.01);
-box-shadow: 0 25px 50px rgba(0,0,0,0.2);
-}
-
-
-.collection-card img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
-.collection-card:hover img {
-transform: scale(1.09);
-}
-
-
-.card-badge {
-position: absolute;
-top: 12px;
-left: 12px;
-background: rgba(255,255,255,0.95);
-color: var(--text-dark);
-padding: 4px 10px;
-border-radius: 15px;
-font-size: 11px;
-font-weight: 600;
-display: flex;
-align-items: center;
-gap: 4px;
-z-index: 2;
-}
-
-
-.card-tag {
-position: absolute;
-top: 12px;
-right: 12px;
-background: rgba(0,0,0,0.6);
-color: white;
-padding: 4px 12px;
-border-radius: 15px;
-font-size: 11px;
-font-weight: 600;
-letter-spacing: 1px;
-backdrop-filter: blur(10px);
-z-index: 2;
-}
-
-
-.card-overlay {
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 50%, transparent 100%);
-padding: 30px 16px 16px;
-color: white;
-transition: padding 0.4s ease;
-z-index: 2;
-}
-
-
-.collection-card:hover .card-overlay {
-padding-bottom: 24px;
-}
-
-
-.card-title-hi {
-font-size: 22px;
-font-weight: 700;
-margin-bottom: 4px;
-line-height: 1.3;
-font-family: 'Tiro Devanagari Hindi', serif;
-}
-
-
-.card-title-en {
-font-size: 13px;
-opacity: 0.85;
-margin-bottom: 0;
-transition: margin 0.3s ease;
-}
-
-
-.card-read-more {
-font-size: 13px;
-margin-top: 0;
-max-height: 0;
-overflow: hidden;
-opacity: 0;
-transition: max-height 0.4s ease, opacity 0.3s ease 0.1s, margin-top 0.4s ease;
-display: flex;
-align-items: center;
-gap: 4px;
-}
-
-
-.collection-card:hover .card-read-more {
-opacity: 1;
-max-height: 30px;
-margin-top: 10px;
-}
-
-
-/* ============ FILTER TABS (Pavitra Sangrah) ============ */
-.filter-tabs {
-display: flex;
-justify-content: center;
-gap: 8px;
-margin-bottom: 50px;
-background: white;
-padding: 8px;
-border-radius: 50px;
-max-width: fit-content;
-margin-left: auto;
-margin-right: auto;
-border: 1px solid var(--border);
-}
-
-
-.filter-tab {
-padding: 12px 28px;
-border-radius: 30px;
-cursor: pointer;
-color: var(--text-muted);
-font-weight: 500;
-transition: all 0.3s;
-font-size: 15px;
-background: transparent;
-border: none;
-font-family: inherit;
-}
-
-
-.filter-tab.active {
-background: var(--text-dark);
-color: white;
-}
-
-
-.filter-tab:hover:not(.active) {
-background: var(--bg-cream);
-color: var(--text-dark);
-}
-
-
-/* ============ DEITY CARDS ============ */
-.deity-grid {
-display: grid;
-grid-template-columns: repeat(5, 1fr);
-gap: 20px;
-}
-
-
-.deity-card {
-position: relative;
-aspect-ratio: 3/4;
-border-radius: 16px;
-overflow: hidden;
-cursor: pointer;
-text-decoration: none;
-color: white;
-transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease;
-display: block;
-}
-
-
-.deity-card:hover {
-transform: translateY(-8px) scale(1.01);
-box-shadow: 0 25px 50px rgba(0,0,0,0.2);
-}
-
-
-.deity-card img {
-width: 100%;
-height: 120%;
-object-fit: cover;
-transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
-.deity-card:hover img {
-transform: scale(1.05);
-}
-
-
-.deity-overlay {
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 50%, transparent 100%);
-padding: 30px 16px 16px;
-color: white;
-z-index: 2;
-}
-
-
-.deity-name {
-font-size: 26px;
-font-family: 'Tiro Devanagari Hindi', serif;
-margin-bottom: 6px;
-}
-
-
-.deity-desc {
-font-size: 12px;
-opacity: 0.85;
-line-height: 1.5;
-margin-bottom: 8px;
-}
-
-
-.deity-read {
-font-size: 13px;
-max-height: 0;
-overflow: hidden;
-opacity: 0;
-transition: max-height 0.4s ease, opacity 0.3s ease 0.1s, margin-top 0.4s ease;
-display: flex;
-align-items: center;
-gap: 4px;
-margin-top: 0;
-}
-
-
-.deity-card:hover .deity-read {
-opacity: 1;
-max-height: 30px;
-margin-top: 8px;
-}
-
-
-/* ============ FESTIVAL CARDS ============ */
-.festival-grid {
-display: grid;
-grid-template-columns: repeat(5, 1fr);
-gap: 20px;
-}
-
-
-.festival-card {
-position: relative;
-aspect-ratio: 3/4;
-border-radius: 16px;
-overflow: hidden;
-cursor: pointer;
-text-decoration: none;
-color: white;
-transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease;
-display: block;
-}
-
-
-.festival-card:hover {
-transform: translateY(-8px) scale(1.01);
-box-shadow: 0 25px 50px rgba(0,0,0,0.2);
-}
-
-
-.festival-card img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
-.festival-card:hover img {
-transform: scale(1.09);
-}
-
-
-.festival-days {
-position: absolute;
-top: 12px;
-right: 12px;
-background: rgba(255,255,255,0.95);
-color: var(--text-dark);
-padding: 4px 12px;
-border-radius: 15px;
-font-size: 12px;
-font-weight: 600;
-display: flex;
-align-items: center;
-gap: 4px;
-z-index: 2;
-}
-
-
-.festival-overlay {
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 50%, transparent 100%);
-padding: 30px 16px 16px;
-color: white;
-z-index: 2;
-}
-
-
-.festival-name {
-font-size: 26px;
-font-family: 'Tiro Devanagari Hindi', serif;
-margin-bottom: 6px;
-}
-
-
-.festival-desc {
-font-size: 12px;
-opacity: 0.85;
-line-height: 1.5;
-}
-
-
-.festival-read {
-font-size: 13px;
-max-height: 0;
-overflow: hidden;
-opacity: 0;
-transition: max-height 0.4s ease, opacity 0.3s ease 0.1s, margin-top 0.4s ease;
-display: flex;
-align-items: center;
-gap: 4px;
-margin-top: 0;
-}
-
-
-.festival-card:hover .festival-read {
-opacity: 1;
-max-height: 30px;
-margin-top: 8px;
-}
-
-
-/* ============ BLOG SECTION ============ */
-.blog-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 24px;
-}
-
-
-.blog-card {
-background: white;
-border-radius: 16px;
-overflow: hidden;
-text-decoration: none;
-color: inherit;
-transition: all 0.3s;
-border: 1px solid var(--border);
-}
-
-
-.blog-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-
-.blog-image {
-width: 100%;
-height: 240px;
-overflow: hidden;
-}
-
-
-.blog-image img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform 0.4s;
-}
-
-
-.blog-card:hover .blog-image img {
-transform: scale(1.05);
-}
-
-
-.blog-content {
-padding: 24px;
-}
-
-
-.blog-meta {
-display: flex;
-align-items: center;
-gap: 12px;
-margin-bottom: 12px;
-font-size: 12px;
-color: var(--text-muted);
-}
-
-
-.blog-tag {
-background: var(--bg-cream);
-padding: 4px 12px;
-border-radius: 15px;
-font-weight: 600;
-color: var(--text-dark);
-}
-
-
-.blog-title {
-font-size: 22px;
-font-family: 'Tiro Devanagari Hindi', serif;
-margin-bottom: 12px;
-line-height: 1.4;
-color: var(--text-dark);
-}
-
-
-.blog-excerpt {
-color: var(--text-muted);
-font-size: 14px;
-line-height: 1.7;
-margin-bottom: 16px;
-}
-
-
-.blog-read-link {
-color: var(--text-dark);
-font-size: 14px;
-font-weight: 500;
-text-decoration: none;
-display: inline-flex;
-align-items: center;
-gap: 6px;
-}
-
-
-/* ============ THOUGHT OF THE DAY ============ */
-.thought-section {
-padding: 0px 0;
-}
-
-
-.thought-header {
-margin-bottom: 40px;
-}
-
-
-.thought-card {
-background: white;
-border: 1px solid var(--border);
-border-radius: 24px;
-padding: 80px 40px;
-text-align: center;
-max-width: 800px;
-margin: 0 auto;
-}
-
-
-.quote-icon {
-font-size: 32px;
-color: var(--accent);
-margin-bottom: 24px;
-}
-
-
-.thought-text {
-font-size: 22px;
-font-family: 'Tiro Devanagari Hindi', serif;
-color: var(--text-dark);
-margin-bottom: 24px;
-line-height: 1.6;
-}
-
-
-.thought-source {
-font-size: 11px;
-letter-spacing: 4px;
-color: var(--text-muted);
-}
-
-
-/* ============ FOOTER ============ */
-footer {
-background: var(--bg-light);
-padding: 40px 0 30px;
-border-top: 1px solid var(--border);
-}
-
-.footer-logo {
-    height: 60px;
-    width: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
-@media (max-width: 768px) {
-    .footer-logo { height: 50px; }
+/* ============ SECTION STYLES ============ */
+.section { padding: 20px 0; }
+.section-tag {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    position: relative;
+    padding-left: 40px;
 }
-.footer-grid {
-display: grid;
-grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-gap: 60px;
-margin-bottom: 50px;
-padding-bottom: 50px;
-border-bottom: 1px solid var(--border);
+.section-tag::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 30px;
+    height: 1px;
+    background: var(--text-muted);
 }
-
-
-.footer-brand-name {
-font-size: 28px;
-font-family: 'Tiro Devanagari Hindi', serif;
-color: var(--text-dark);
-margin-bottom: 4px;
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+    gap: 40px;
 }
-
-
-.footer-brand-name small {
-display: block;
-font-size: 11px;
-color: var(--text-muted);
-letter-spacing: 3px;
-margin-top: 4px;
-font-family: 'Mukta', sans-serif;
+.section-header-left { flex: 1; }
+.section-title {
+    font-size: 56px;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-bottom: 16px;
 }
-
-
-.footer-about {
-color: var(--text-muted);
-font-size: 14px;
-line-height: 1.7;
-margin: 20px 0;
+.section-desc {
+    font-size: 17px;
+    color: var(--text-muted);
+    max-width: 600px;
+    line-height: 1.7;
 }
-
-
-
-
-.footer-col-title {
-font-family: 'Tiro Devanagari Hindi', serif;
-font-size: 22px;
-margin-bottom: 24px;
-color: var(--text-dark);
+.view-all-btn {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 14px 28px;
+    border-radius: 50px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
-
-
-.footer-links {
-list-style: none;
-}
-
-
-.footer-links li {
-margin-bottom: 12px;
-}
-
-
-.footer-links a {
-color: var(--text-muted);
-text-decoration: none;
-font-size: 15px;
-transition: color 0.3s;
+.view-all-btn:hover {
+    background: var(--text-dark);
+    color: white;
+    border-color: var(--text-dark);
 }
 
+/* ============ COLLECTION / DEITY / FESTIVAL CARDS ============ */
+.collection-grid,
+.deity-grid,
+.festival-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+.collection-card,
+.deity-card,
+.festival-card {
+    position: relative;
+    aspect-ratio: 3/4;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease;
+    display: block;
+}
+.collection-card:hover,
+.deity-card:hover,
+.festival-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+.collection-card img,
+.festival-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.deity-card img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.collection-card:hover img,
+.festival-card:hover img { transform: scale(1.09); }
+.deity-card:hover img { transform: scale(1.05); }
 
-.footer-links a:hover {
-color: var(--accent);
+.card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(255,255,255,0.95);
+    color: var(--text-dark);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 2;
+}
+.card-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+.card-overlay,
+.deity-overlay,
+.festival-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 50%, transparent 100%);
+    padding: 30px 16px 16px;
+    color: white;
+    transition: padding 0.4s ease;
+    z-index: 2;
+}
+.collection-card:hover .card-overlay { padding-bottom: 24px; }
+.card-title-hi {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    line-height: 1.3;
+    font-family: 'Tiro Devanagari Hindi', serif;
+}
+.card-title-en {
+    font-size: 13px;
+    opacity: 0.85;
+    margin-bottom: 0;
+    transition: margin 0.3s ease;
+}
+.card-read-more,
+.deity-read,
+.festival-read {
+    font-size: 13px;
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease 0.1s, margin-top 0.4s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.collection-card:hover .card-read-more,
+.deity-card:hover .deity-read,
+.festival-card:hover .festival-read {
+    opacity: 1;
+    max-height: 30px;
+    margin-top: 10px;
+}
+.deity-name,
+.festival-name {
+    font-size: 26px;
+    font-family: 'Tiro Devanagari Hindi', serif;
+    margin-bottom: 6px;
+}
+.deity-desc,
+.festival-desc {
+    font-size: 12px;
+    opacity: 0.85;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+.festival-days {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(255,255,255,0.95);
+    color: var(--text-dark);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 2;
 }
 
-
-
-
-
-.footer-bottom {
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-wrap: wrap;
-gap: 16px;
-color: var(--text-muted);
-font-size: 14px;
+/* ============ FILTER TABS ============ */
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+    background: white;
+    padding: 8px;
+    border-radius: 50px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--border);
+}
+.filter-tab {
+    padding: 12px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: all 0.3s;
+    font-size: 15px;
+    background: transparent;
+    border: none;
+    font-family: inherit;
+}
+.filter-tab.active {
+    background: var(--text-dark);
+    color: white;
+}
+.filter-tab:hover:not(.active) {
+    background: var(--bg-cream);
+    color: var(--text-dark);
 }
 
-
-.footer-bottom-links {
-display: flex;
-gap: 30px;
+/* ============ BLOG SECTION ============ */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.blog-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s;
+    border: 1px solid var(--border);
+}
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+.blog-image { width: 100%; height: 240px; overflow: hidden; }
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+.blog-card:hover .blog-image img { transform: scale(1.05); }
+.blog-content { padding: 24px; }
+.blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+.blog-tag {
+    background: var(--bg-cream);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+.blog-title {
+    font-size: 22px;
+    font-family: 'Tiro Devanagari Hindi', serif;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    color: var(--text-dark);
+}
+.blog-excerpt {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+.blog-read-link {
+    color: var(--text-dark);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
-
-.footer-bottom-links a {
-color: var(--text-muted);
-text-decoration: none;
+/* ============ THOUGHT OF THE DAY ============ */
+.thought-section { padding: 0px 0; }
+.thought-header { margin-bottom: 40px; }
+.thought-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 80px 40px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
-
-
-.footer-bottom-links a:hover { color: var(--accent); }
-
+.quote-icon {
+    font-size: 32px;
+    color: var(--accent);
+    margin-bottom: 24px;
+}
+.thought-text {
+    font-size: 22px;
+    font-family: 'Tiro Devanagari Hindi', serif;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+.thought-source {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--text-muted);
+}
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 1200px) {
-.container { padding: 0 40px; }
-.main-header { padding: 18px 40px; }
-.nav-menu > li > a { padding: 10px 12px; font-size: 15px; }
-.collection-grid, .deity-grid, .festival-grid {
-grid-template-columns: repeat(4, 1fr);
+    .container { padding: 0 40px; }
+    .collection-grid, .deity-grid, .festival-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .hero h1 { font-size: 52px; }
 }
-.hero h1 { font-size: 52px; }
-}
-
-
 @media (max-width: 1024px) {
-.container { padding: 0 80px; }
-.main-header { padding: 18px 80px; }
-
-
-.hero {
-grid-template-columns: 1fr;
-gap: 40px;
-text-align: center;
-padding: 60px 0;
+    .container { padding: 0 80px; }
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+        padding: 60px 0;
+    }
+    .hero-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-badge { margin: 0 auto 24px; }
+    .hero h1 { font-size: 48px; text-align: center; }
+    .hero-desc {
+        max-width: 600px;
+        text-align: center;
+        margin: 0 auto 32px;
+    }
+    .hero-categories { justify-content: center; max-width: 600px; }
+    .hero-image { max-width: 500px; margin: 0 auto; aspect-ratio: 4/4; }
+    .section { padding: 70px 0; }
+    .section-title { font-size: 38px; }
+    .collection-grid, .deity-grid, .festival-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+    .blog-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .section-header { flex-direction: column; align-items: flex-start; gap: 20px; }
 }
-.hero-left {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.hero-badge { margin: 0 auto 24px; }
-.hero h1 {
-font-size: 48px;
-text-align: center;
-}
-.hero-desc {
-max-width: 600px;
-text-align: center;
-margin: 0 auto 32px;
-}
-.hero-categories {
-justify-content: center;
-max-width: 600px;
-}
-.hero-image {
-max-width: 500px;
-margin: 0 auto;
-aspect-ratio: 4/4;
-}
-
-
-.section { padding: 70px 0; }
-.section-title { font-size: 38px; }
-
-
-.collection-grid, .deity-grid, .festival-grid {
-grid-template-columns: repeat(3, 1fr);
-gap: 18px;
-}
-
-
-.blog-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-
-
-.footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-
-
-.section-header {
-flex-direction: column;
-align-items: flex-start;
-gap: 20px;
-}
-}
-
-
 @media (max-width: 768px) {
-.container { padding: 0 30px; }
-.main-header { padding: 14px 30px; }
-
-
-.logo-text { font-size: 20px; }
-.logo-icon { font-size: 26px; }
-.logo-text small { display: none; }
-
-
-.nav-menu { display: none; }
-.mobile-menu-btn { display: block; }
-
-
-.search-box.active { width: calc(100vw - 180px); max-width: 200px; }
-.lang-toggle { padding: 6px 12px; font-size: 13px; }
-
-
-/* HERO mobile fix */
-.hero {
-padding: 40px 0;
-gap: 30px;
-text-align: left;
+    .container { padding: 0 30px; }
+    .hero { padding: 40px 0; gap: 30px; text-align: left; }
+    .hero-badge { font-size: 12px; padding: 6px 14px; letter-spacing: 1.5px; }
+    .hero-mantra { font-size: 15px; letter-spacing: 2px; margin-bottom: 16px; }
+    .hero h1 { font-size: 32px; line-height: 1.2; margin-bottom: 16px; }
+    .hero-desc { font-size: 14px; line-height: 1.7; max-width: 100%; margin-bottom: 24px; }
+    .hero-categories { flex-wrap: wrap; gap: 8px; }
+    .hero-cat-pill {
+        padding: 10px 16px;
+        flex: 1;
+        min-width: calc(50% - 4px);
+        justify-content: flex-start;
+    }
+    .pill-title { font-size: 13px; }
+    .pill-subtitle { font-size: 10px; }
+    .hero-image { aspect-ratio: 4/4; max-width: 100%; }
+    .section { padding: 50px 0; }
+    .section-title { font-size: 28px; }
+    .section-desc { font-size: 14px; }
+    .section-tag { font-size: 10px; letter-spacing: 3px; padding-left: 30px; }
+    .section-tag::before { width: 20px; }
+    .collection-grid, .deity-grid, .festival-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+    .card-title-hi { font-size: 16px; }
+    .card-title-en { font-size: 11px; }
+    .card-tag, .card-badge, .festival-days {
+        font-size: 10px;
+        padding: 3px 8px;
+        top: 8px;
+    }
+    .card-tag { right: 8px; }
+    .card-badge { left: 8px; }
+    .festival-days { right: 8px; }
+    .card-overlay, .deity-overlay, .festival-overlay { padding: 20px 12px 12px; }
+    .deity-name, .festival-name { font-size: 18px; }
+    .deity-desc, .festival-desc { font-size: 11px; }
+    .blog-grid { grid-template-columns: 1fr; gap: 16px; }
+    .blog-image { height: 200px; }
+    .blog-content { padding: 20px; }
+    .blog-title { font-size: 18px; }
+    .filter-tabs {
+        overflow-x: auto;
+        max-width: 100%;
+        padding: 6px;
+        gap: 4px;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+    }
+    .filter-tab {
+        padding: 8px 16px;
+        font-size: 13px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    .thought-card { padding: 40px 20px; }
+    .thought-text { font-size: 16px; }
+    .view-all-btn { padding: 10px 20px; font-size: 13px; }
 }
-.hero-badge {
-font-size: 12px;
-padding: 6px 14px;
-letter-spacing: 1.5px;
-}
-.hero-mantra {
-font-size: 15px;
-letter-spacing: 2px;
-margin-bottom: 16px;
-}
-.hero h1 {
-font-size: 32px;
-line-height: 1.2;
-margin-bottom: 16px;
-}
-.hero-desc {
-font-size: 14px;
-line-height: 1.7;
-max-width: 100%;
-margin-bottom: 24px;
-}
-.hero-categories {
-flex-wrap: wrap;
-gap: 8px;
-}
-.hero-cat-pill {
-padding: 10px 16px;
-flex: 1;
-min-width: calc(50% - 4px);
-justify-content: flex-start;
-}
-.pill-title { font-size: 13px; }
-.pill-subtitle { font-size: 10px; }
-.hero-image {
-aspect-ratio: 4/4;
-max-width: 100%;
-}
-
-
-.section { padding: 50px 0; }
-.section-title { font-size: 28px; }
-.section-desc { font-size: 14px; }
-.section-tag { font-size: 10px; letter-spacing: 3px; padding-left: 30px; }
-.section-tag::before { width: 20px; }
-
-
-/* Cards 2 per row on mobile - with proper gap */
-.collection-grid, .deity-grid, .festival-grid {
-grid-template-columns: repeat(2, 1fr);
-gap: 14px;
-}
-
-
-.card-title-hi { font-size: 16px; }
-.card-title-en { font-size: 11px; }
-.card-tag, .card-badge, .festival-days {
-font-size: 10px;
-padding: 3px 8px;
-top: 8px;
-}
-.card-tag { right: 8px; }
-.card-badge { left: 8px; }
-.festival-days { right: 8px; }
-.card-overlay, .deity-overlay, .festival-overlay {
-padding: 20px 12px 12px;
-}
-
-
-.deity-name, .festival-name { font-size: 18px; }
-.deity-desc, .festival-desc { font-size: 11px; }
-
-
-.blog-grid { grid-template-columns: 1fr; gap: 16px; }
-.blog-image { height: 200px; }
-.blog-content { padding: 20px; }
-.blog-title { font-size: 18px; }
-
-
-.filter-tabs {
-overflow-x: auto;
-max-width: 100%;
-padding: 6px;
-gap: 4px;
-justify-content: flex-start;
--webkit-overflow-scrolling: touch;
-}
-.filter-tab {
-padding: 8px 16px;
-font-size: 13px;
-white-space: nowrap;
-flex-shrink: 0;
-}
-
-
-.thought-card { padding: 40px 20px; }
-.thought-text { font-size: 16px; }
-
-
-.footer-grid { grid-template-columns: 1fr; gap: 35px; padding-bottom: 35px; }
-.footer-bottom { flex-direction: column; text-align: center; gap: 16px; }
-.footer-bottom-links { gap: 20px; flex-wrap: wrap; justify-content: center; }
-
-
-footer { padding: 60px 0 30px; }
-
-
-.view-all-btn {
-padding: 10px 20px;
-font-size: 13px;
-}
-}
-
-
 @media (max-width: 480px) {
-.container { padding: 0 16px; }
-.main-header { padding: 12px 16px; }
-
-
-.hero h1 { font-size: 26px; }
-.section-title { font-size: 22px; }
-
-
-.logo-text { font-size: 18px; }
-.logo-icon { font-size: 24px; }
-
-
-.hero-cat-pill {
-min-width: 100%;
-padding: 12px 16px;
-}
-
-
-.card-title-hi { font-size: 14px; }
-.deity-name, .festival-name { font-size: 16px; }
-.deity-desc, .festival-desc { font-size: 10px; }
-
-
-.search-box.active { width: calc(100vw - 160px); max-width: 160px; }
-.lang-toggle { padding: 5px 10px; font-size: 12px; }
-.search-btn { width: 36px; height: 36px; }
+    .container { padding: 0 16px; }
+    .hero h1 { font-size: 26px; }
+    .section-title { font-size: 22px; }
+    .hero-cat-pill { min-width: 100%; padding: 12px 16px; }
+    .card-title-hi { font-size: 14px; }
+    .deity-name, .festival-name { font-size: 16px; }
+    .deity-desc, .festival-desc { font-size: 10px; }
 }
 </style>
 </head>
 <body>
-<div class="top-bar">
-    🙏 हमारी वेबसाइट पर पधारने के लिए आपका धन्यवाद - हमारा प्रयास एक भक्त को भगवान से जोड़े रखना है 🙏
-</div>
 
-<!-- ============ HEADER ============ -->
-<header class="main-header">
-<a href="/" class="logo">
-    <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778996615/c52aed3d-c26d-48f7-8ace-8bb74f971108_ve8ab0.png" alt="भजन लोक" class="logo-img">
-</a>
-
-<div class="nav-wrapper">
-<nav>
-<ul class="nav-menu">
-<li><a href="/" class="home-icon-btn"><i class="fa-solid fa-house"></i></a></li>
-<li class="has-dropdown">
-<a href="/aarti/">आरती</a>
-<ul class="dropdown">
-<li><a href="/aarti/hanuman/">हनुमान आरती</a></li>
-<li><a href="/aarti/ganesh/">गणेश आरती</a></li>
-<li><a href="/aarti/shiv/">शिव आरती</a></li>
-<li><a href="/aarti/">सभी आरती →</a></li>
-</ul>
-</li>
-<li class="has-dropdown">
-<a href="/chalisa/">चालीसा</a>
-<ul class="dropdown">
-<li><a href="/chalisa/hanuman/">हनुमान चालीसा</a></li>
-<li><a href="/chalisa/durga/">दुर्गा चालीसा</a></li>
-<li><a href="/chalisa/">सभी चालीसा →</a></li>
-</ul>
-</li>
-<li class="has-dropdown">
-<a href="/bhajan/">भजन</a>
-<ul class="dropdown">
-<li><a href="/bhajan/krishna/">कृष्ण भजन</a></li>
-<li><a href="/bhajan/">सभी भजन →</a></li>
-</ul>
-</li>
-<li class="has-dropdown">
-<a href="/festivals/">त्योहार</a>
-<ul class="dropdown">
-<li><a href="/festivals/diwali/">दीवाली</a></li>
-<li><a href="/festivals/navratri/">नवरात्रि</a></li>
-<li><a href="/festivals/">सभी त्योहार →</a></li>
-</ul>
-</li>
-<li class="has-dropdown">
-<a href="/anya/">अन्य</a>
-<ul class="dropdown">
-<li><a href="/temples/">मंदिर</a></li>
-<li><a href="/gods/">देवता</a></li>
-<li><a href="/vrat-katha/">व्रत कथा</a></li>
-<li><a href="/mantra/">मंत्र/श्लोक</a></li>
-<li><a href="/stotra/">स्तोत्र और स्तुति</a></li>
-<li><a href="/blog/">ब्लॉग</a></li>
-</ul>
-</li>
-</ul>
-</nav>
-
-
-<button class="lang-toggle" onclick="window.location.href='/en/'">
-🌐 EN
-</button>
-
-
-<button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
-</div>
-</header>
-
-
-<div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
-
-
-<nav class="mobile-nav" id="mobileNav">
-<button class="mobile-nav-close" onclick="toggleMobileMenu()">✕</button>
-<ul class="mobile-menu-list">
-<li><a href="/" class="mobile-link"><i class="fa-solid fa-house"></i> होम</a></li>
-<li class="mobile-has-sub">
-<a href="#" class="mobile-link" onclick="toggleMobileSub(this); return false;">आरती <span class="arrow">▼</span></a>
-<ul class="mobile-submenu">
-<li><a href="/aarti/hanuman/">हनुमान आरती</a></li>
-<li><a href="/aarti/ganesh/">गणेश आरती</a></li>
-<li><a href="/aarti/">सभी आरती →</a></li>
-</ul>
-</li>
-<li class="mobile-has-sub">
-<a href="#" class="mobile-link" onclick="toggleMobileSub(this); return false;">चालीसा <span class="arrow">▼</span></a>
-<ul class="mobile-submenu">
-<li><a href="/chalisa/hanuman/">हनुमान चालीसा</a></li>
-<li><a href="/chalisa/">सभी चालीसा →</a></li>
-</ul>
-</li>
-<li><a href="/bhajan/" class="mobile-link">भजन</a></li>
-<li><a href="/festivals/" class="mobile-link">त्योहार</a></li>
-  <li><a href="/temples/" class="mobile-link">मंदिर</a></li>
-  <li><a href="/gods/" class="mobile-link">देवता</a></li>
-  <li><a href="/vrat-katha/" class="mobile-link">व्रत कथा</a></li>
-<li><a href="/temples/" class="mobile-link">मंदिर</a></li>
-<li><a href="/stotra/" class="mobile-link">स्तोत्र और स्तुति</a></li>
-  <li><a href="/mantra/" class="mobile-link">मंत्र और श्लोक</a></li>
-<li><a href="/blog/" class="mobile-link">ब्लॉग</a></li>
-
-</ul>
-</nav>
-
-
-
+<!-- ============ HEADER PLACEHOLDER ============ -->
+<!-- Header content loaded from /header.html via fetch (see script at bottom) -->
+<div id="header-placeholder"></div>
 
 <!-- ============ HERO SECTION ============ -->
 <section class="hero container">
-<div class="hero-left">
-<span class="hero-badge">पवित्र • सरल • आध्यात्मिक</span>
-<p class="hero-mantra">|| ॐ सत्यम् शिवम् सुन्दरम् ||</p>
-<h1>सनातन ज्ञान का<br>दिव्य संग्रह</h1>
-<p class="hero-desc">वेदों, मंत्रों, आरतियों और चालीसाओं के माध्यम से आत्मिक शांति और ईश्वर से जुड़ने का अनुभव प्राप्त करें।</p>
+    <div class="hero-left">
+        <span class="hero-badge">पवित्र • सरल • आध्यात्मिक</span>
+        <p class="hero-mantra">|| ॐ सत्यम् शिवम् सुन्दरम् ||</p>
+        <h1>सनातन ज्ञान का<br>दिव्य संग्रह</h1>
+        <p class="hero-desc">वेदों, मंत्रों, आरतियों और चालीसाओं के माध्यम से आत्मिक शांति और ईश्वर से जुड़ने का अनुभव प्राप्त करें।</p>
 
+        <div class="hero-categories">
+            <a href="/chalisa/" class="hero-cat-pill">
+                <span class="pill-dot"></span>
+                <div class="pill-text">
+                    <span class="pill-title">चालीसा</span>
+                    <span class="pill-subtitle">लोकप्रिय पाठ</span>
+                </div>
+            </a>
+            <a href="/aarti/" class="hero-cat-pill">
+                <span class="pill-dot"></span>
+                <div class="pill-text">
+                    <span class="pill-title">आरती</span>
+                    <span class="pill-subtitle">दैनिक आराधना</span>
+                </div>
+            </a>
+            <a href="/shlok/" class="hero-cat-pill">
+                <span class="pill-dot"></span>
+                <div class="pill-text">
+                    <span class="pill-title">श्लोक</span>
+                    <span class="pill-subtitle">मंत्र और ज्ञान</span>
+                </div>
+            </a>
+        </div>
+    </div>
 
-<div class="hero-categories">
-<a href="/chalisa/" class="hero-cat-pill">
-<span class="pill-dot"></span>
-<div class="pill-text">
-<span class="pill-title">चालीसा</span>
-<span class="pill-subtitle">लोकप्रिय पाठ</span>
-</div>
-</a>
-<a href="/aarti/" class="hero-cat-pill">
-<span class="pill-dot"></span>
-<div class="pill-text">
-<span class="pill-title">आरती</span>
-<span class="pill-subtitle">दैनिक आराधना</span>
-</div>
-</a>
-<a href="/shlok/" class="hero-cat-pill">
-<span class="pill-dot"></span>
-<div class="pill-text">
-<span class="pill-title">श्लोक</span>
-<span class="pill-subtitle">मंत्र और ज्ञान</span>
-</div>
-</a>
-</div>
-</div>
-
-
-<div class="hero-image">
-<video autoplay muted loop playsinline>
-    <source src="https://res.cloudinary.com/ddf8equjt/video/upload/v1779004304/hero-bg_opipsu.mp4" type="video/mp4">
-</video>
-</div>
+    <div class="hero-image">
+        <video autoplay muted loop playsinline>
+            <source src="https://res.cloudinary.com/ddf8equjt/video/upload/v1779004304/hero-bg_opipsu.mp4" type="video/mp4">
+        </video>
+    </div>
 </section>
-
-
-
 
 <!-- ============ POPULAR COLLECTION ============ -->
-
 <br><section class="section container">
-<div class="section-header">
-<div class="section-header-left">
-<span class="section-tag">POPULAR COLLECTION</span>
-<h2 class="section-title">लोकप्रिय संग्रह</h2>
-<p class="section-desc">सबसे प्रिय प्रार्थनाएं, भजन और मंत्र खोजें</p>
-</div>
-</div>
+    <div class="section-header">
+        <div class="section-header-left">
+            <span class="section-tag">POPULAR COLLECTION</span>
+            <h2 class="section-title">लोकप्रिय संग्रह</h2>
+            <p class="section-desc">सबसे प्रिय प्रार्थनाएं, भजन और मंत्र खोजें</p>
+        </div>
+    </div>
 
-<div class="collection-grid">
-<a href="/chalisa/hanuman/" class="collection-card">
-<img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935472/fe411e082eda6a74abe20c9dd06cb777_kfwi98.jpg" alt="हनुमान चालीसा">
-<span class="card-tag">CHALISA</span>
-<div class="card-overlay">
-<div class="card-title-hi">श्री हनुमान चालीसा</div>
-<div class="card-title-en">Hanuman Chalisa</div>
-<div class="card-read-more">अभी पढ़ें →</div>
-</div>
-</a>
-
-
-<a href="/chalisa/bajrang-baan/" class="collection-card">
-<img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935472/a4c5ce1e8bab9d729ab39db0c2046869_onj2w5.jpg" alt="बजरंग बाण">
-<span class="card-tag">CHALISA</span>
-<div class="card-overlay">
-<div class="card-title-hi">बजरंग बाण</div>
-<div class="card-title-en">Bajrang Baan</div>
-<div class="card-read-more">अभी पढ़ें →</div>
-</div>
-</a>
-
-
-<a href="/aarti/radha/" class="collection-card">
-<img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935471/1c1c74aa2bbd3f2ed7baaef32389ed9a_vrvsff.jpg" alt="राधा आरती">
-<span class="card-tag">AARTI</span>
-<div class="card-overlay">
-<div class="card-title-hi">श्री राधा जी की आरती</div>
-<div class="card-title-en">Radha Aarti</div>
-<div class="card-read-more">अभी पढ़ें →</div>
-</div>
-</a>
-
-
-<a href="/stotra/jyotirling/" class="collection-card">
-<img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935472/034e7d631d3537160b6190efd2c5f9a7_wssjha.jpg" alt="ज्योतिर्लिंग स्तोत्र">
-<span class="card-tag">STOTRA</span>
-<div class="card-overlay">
-<div class="card-title-hi">द्वादश ज्योतिर्लिंग स्तोत्र</div>
-<div class="card-title-en">Dwadash Jyotirling Stotra</div>
-<div class="card-read-more">अभी पढ़ें →</div>
-</div>
-</a>
-
-
-<a href="/shlok/krishna-vasudevaya/" class="collection-card">
-<img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935471/535e5ad7a0354ede0bf1bf54bd682b9c_sgwleh.jpg" alt="कृष्ण वासुदेव">
-<span class="card-tag">SHLOKA</span>
-<div class="card-overlay">
-<div class="card-title-hi">Krishna Vasudevaya</div>
-<div class="card-title-en">कृष्ण वासुदेव</div>
-<div class="card-read-more">अभी पढ़ें →</div>
-</div>
-</a>
-</div>
+    <div class="collection-grid">
+        <a href="/chalisa/hanuman/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935472/fe411e082eda6a74abe20c9dd06cb777_kfwi98.jpg" alt="हनुमान चालीसा">
+            <span class="card-tag">CHALISA</span>
+            <div class="card-overlay">
+                <div class="card-title-hi">श्री हनुमान चालीसा</div>
+                <div class="card-title-en">Hanuman Chalisa</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/chalisa/bajrang-baan/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935472/a4c5ce1e8bab9d729ab39db0c2046869_onj2w5.jpg" alt="बजरंग बाण">
+            <span class="card-tag">CHALISA</span>
+            <div class="card-overlay">
+                <div class="card-title-hi">बजरंग बाण</div>
+                <div class="card-title-en">Bajrang Baan</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/aarti/radha/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935471/1c1c74aa2bbd3f2ed7baaef32389ed9a_vrvsff.jpg" alt="राधा आरती">
+            <span class="card-tag">AARTI</span>
+            <div class="card-overlay">
+                <div class="card-title-hi">श्री राधा जी की आरती</div>
+                <div class="card-title-en">Radha Aarti</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/stotra/jyotirling/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935472/034e7d631d3537160b6190efd2c5f9a7_wssjha.jpg" alt="ज्योतिर्लिंग स्तोत्र">
+            <span class="card-tag">STOTRA</span>
+            <div class="card-overlay">
+                <div class="card-title-hi">द्वादश ज्योतिर्लिंग स्तोत्र</div>
+                <div class="card-title-en">Dwadash Jyotirling Stotra</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/shlok/krishna-vasudevaya/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935471/535e5ad7a0354ede0bf1bf54bd682b9c_sgwleh.jpg" alt="कृष्ण वासुदेव">
+            <span class="card-tag">SHLOKA</span>
+            <div class="card-overlay">
+                <div class="card-title-hi">Krishna Vasudevaya</div>
+                <div class="card-title-en">कृष्ण वासुदेव</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+    </div>
 </section>
 
-
-
-
 <!-- ============ PAVITRA SANGRAH WITH FILTERS ============ -->
-    <br><section class="section container">
-        <div class="section-header">
-            <div class="section-header-left">
-                <span class="section-tag">DEVOTIONAL COLLECTION</span>
-                <h2 class="section-title">पवित्र संग्रह</h2>
-                <p class="section-desc">दिव्य आशीर्वाद, आंतरिक शक्ति और आध्यात्मिक शांति प्राप्त करने के लिए इन शक्तिशाली चालीसा श्लोकों का पाठ करें।</p>
+<br><section class="section container">
+    <div class="section-header">
+        <div class="section-header-left">
+            <span class="section-tag">DEVOTIONAL COLLECTION</span>
+            <h2 class="section-title">पवित्र संग्रह</h2>
+            <p class="section-desc">दिव्य आशीर्वाद, आंतरिक शक्ति और आध्यात्मिक शांति प्राप्त करने के लिए इन शक्तिशाली चालीसा श्लोकों का पाठ करें।</p>
+        </div>
+        <a href="/chalisa/" class="view-all-btn" id="viewAllBtn">सभी चालीसा देखें →</a>
+    </div>
+
+    <div class="filter-tabs">
+        <button class="filter-tab active" onclick="filterCategory(this, 'chalisa')">चालीसा</button>
+        <button class="filter-tab" onclick="filterCategory(this, 'aarti')">पवित्र आरती संग्रह</button>
+        <button class="filter-tab" onclick="filterCategory(this, 'stotra')">स्तोत्र और स्तुति</button>
+        <button class="filter-tab" onclick="filterCategory(this, 'shlok')">श्लोक</button>
+    </div>
+
+    <!-- CHALISA -->
+    <div class="collection-grid filter-group active" data-category="chalisa">
+        <a href="/chalisa/shiv/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938786/428897a427e4c2e789b3a959766065e8_jwuedn.jpg" alt="शिव चालीसा">
+            <div class="card-overlay">
+                <div class="card-title-hi">शिव चालीसा</div>
+                <div class="card-title-en">Shiv Chalisa</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
             </div>
-            <a href="/chalisa/" class="view-all-btn" id="viewAllBtn">सभी चालीसा देखें →</a>
-        </div>
+        </a>
+        <a href="/chalisa/bhairav/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937061/f5c392970d59a525dfb441845c301605_mn4zq4.jpg" alt="भैरव चालीसा">
+            <div class="card-overlay">
+                <div class="card-title-hi">भैरव चालीसा</div>
+                <div class="card-title-en">Lord Bhairav</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/chalisa/durga/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937061/67d47216d314bd33c5e40347be48cc93_r08flv.jpg" alt="दुर्गा चालीसा">
+            <div class="card-overlay">
+                <div class="card-title-hi">दुर्गा चालीसा</div>
+                <div class="card-title-en">Durga</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/chalisa/ganesh/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937061/73b838689b40459b03a014d9c41a7f14_ot3jmh.jpg" alt="गणेश चालीसा">
+            <div class="card-overlay">
+                <div class="card-title-hi">गणेश चालीसा</div>
+                <div class="card-title-en">Ganesha</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/chalisa/ganga/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937061/9c5c864689a813c75ab69b22cc4ebf2f_mazynk.jpg" alt="गंगा चालीसा">
+            <div class="card-overlay">
+                <div class="card-title-hi">गंगा चालीसा</div>
+                <div class="card-title-en">Maa Ganga</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+    </div>
 
-        <div class="filter-tabs">
-            <button class="filter-tab active" onclick="filterCategory(this, 'chalisa')">चालीसा</button>
-            <button class="filter-tab" onclick="filterCategory(this, 'aarti')">पवित्र आरती संग्रह</button>
-            <button class="filter-tab" onclick="filterCategory(this, 'stotra')">स्तोत्र और स्तुति</button>
-            <button class="filter-tab" onclick="filterCategory(this, 'shlok')">श्लोक</button>
-        </div>
+    <!-- AARTI -->
+    <div class="collection-grid filter-group" data-category="aarti" style="display:none;">
+        <a href="/aarti/hanuman/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937366/7400ed8f9c0be8bc0b4fb445d20440a8_xplr8n.jpg" alt="हनुमान आरती">
+            <div class="card-overlay">
+                <div class="card-title-hi">हनुमान आरती</div>
+                <div class="card-title-en">Hanuman Aarti</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/aarti/krishna/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937366/4bd271873c836e610c6b10b1166dd09c_sw0yyo.jpg" alt="कृष्ण आरती">
+            <div class="card-overlay">
+                <div class="card-title-hi">कृष्ण आरती</div>
+                <div class="card-title-en">Krishna Aarti</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/aarti/shiv/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937366/540865bfa0298dd49d85783e94e19ee2_fshkso.jpg" alt="शिव आरती">
+            <div class="card-overlay">
+                <div class="card-title-hi">शिव आरती</div>
+                <div class="card-title-en">Shiv Aarti</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/aarti/ganesh/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937367/ec417381c72a40eaa4c2c755a70695ec_oso3ma.jpg" alt="गणेश आरती">
+            <div class="card-overlay">
+                <div class="card-title-hi">गणेश आरती</div>
+                <div class="card-title-en">Ganesh Aarti</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/aarti/durga/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937366/b22d611884d29c4f71c1d95a753d5029_kd7xhh.jpg" alt="दुर्गा आरती">
+            <div class="card-overlay">
+                <div class="card-title-hi">दुर्गा आरती</div>
+                <div class="card-title-en">Durga Aarti</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+    </div>
 
-        <!-- CHALISA CARDS -->
-        <div class="collection-grid filter-group active" data-category="chalisa">
-            <a href="/chalisa/bajrang-baan/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938786/428897a427e4c2e789b3a959766065e8_jwuedn.jpg" alt="बजरंग बाण">
+    <!-- STOTRA -->
+    <div class="collection-grid filter-group" data-category="stotra" style="display:none;">
+        <a href="/stotra/jyotirling/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935472/034e7d631d3537160b6190efd2c5f9a7_wssjha.jpg" alt="ज्योतिर्लिंग स्तोत्र">
+            <div class="card-overlay">
+                <div class="card-title-hi">द्वादश ज्योतिर्लिंग स्तोत्र</div>
+                <div class="card-title-en">Dwadash Jyotirling</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/stotra/lingashtakam/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938076/aaa9c2ba980b973f735b0803fe36362f_ftvxgl.jpg" alt="लिंगाष्टकम">
+            <div class="card-overlay">
+                <div class="card-title-hi">लिंगाष्टकम</div>
+                <div class="card-title-en">Lingashtakam</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/stotra/vishnu-sahasranama/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938075/04ef5697ddd17c3a93f8d4345e6110e1_zabqql.jpg" alt="विष्णु सहस्रनाम">
+            <div class="card-overlay">
+                <div class="card-title-hi">विष्णु सहस्रनाम</div>
+                <div class="card-title-en">Vishnu Sahasranama</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/stotra/aditya-hridayam/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938075/47ef2779c2367cb993588606b994c829_scx5hk.jpg" alt="आदित्य हृदयम">
+            <div class="card-overlay">
+                <div class="card-title-hi">आदित्य हृदयम</div>
+                <div class="card-title-en">Aditya Hridayam</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/stotra/durga-saptashati/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938076/789cf582ef8c65fe95977446938e0127_udzqta.jpg" alt="दुर्गा सप्तशती">
+            <div class="card-overlay">
+                <div class="card-title-hi">दुर्गा सप्तशती</div>
+                <div class="card-title-en">Durga Saptashati</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+    </div>
 
-                <div class="card-overlay">
-                    <div class="card-title-hi">शिव चालीसा</div>
-                    <div class="card-title-en">Shiv Chalisa</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-            <a href="/chalisa/bhairav/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937061/f5c392970d59a525dfb441845c301605_mn4zq4.jpg" alt="भैरव चालीसा">
-                <div class="card-overlay">
-                    <div class="card-title-hi">भैरव चालीसा</div>
-                    <div class="card-title-en">Lord Bhairav</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-            <a href="/chalisa/durga/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937061/67d47216d314bd33c5e40347be48cc93_r08flv.jpg" alt="दुर्गा चालीसा">
-                <div class="card-overlay">
-                    <div class="card-title-hi">दुर्गा चालीसा</div>
-                    <div class="card-title-en">Durga</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-            <a href="/chalisa/ganesh/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937061/73b838689b40459b03a014d9c41a7f14_ot3jmh.jpg" alt="गणेश चालीसा">
-                <div class="card-overlay">
-                    <div class="card-title-hi">गणेश चालीसा</div>
-                    <div class="card-title-en">Ganesha</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-            <a href="/chalisa/ganga/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937061/9c5c864689a813c75ab69b22cc4ebf2f_mazynk.jpg" alt="गंगा चालीसा">
-                <div class="card-overlay">
-                    <div class="card-title-hi">गंगा चालीसा</div>
-                    <div class="card-title-en">Maa Ganga</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-        </div>
-
-        <!-- AARTI CARDS -->
-        <div class="collection-grid filter-group" data-category="aarti" style="display:none;">
-            <a href="/aarti/hanuman/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937366/7400ed8f9c0be8bc0b4fb445d20440a8_xplr8n.jpg" alt="हनुमान आरती">
-                <div class="card-overlay">
-                    <div class="card-title-hi">हनुमान आरती</div>
-                    <div class="card-title-en">Hanuman Aarti</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-            <a href="/aarti/krishna/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937366/4bd271873c836e610c6b10b1166dd09c_sw0yyo.jpg" alt="कृष्ण आरती">
-                <div class="card-overlay">
-                    <div class="card-title-hi">कृष्ण आरती</div>
-                    <div class="card-title-en">Krishna Aarti</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-            <a href="/aarti/shiv/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937366/540865bfa0298dd49d85783e94e19ee2_fshkso.jpg" alt="शिव आरती">
-                <div class="card-overlay">
-                    <div class="card-title-hi">शिव आरती</div>
-                    <div class="card-title-en">Shiv Aarti</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-            <a href="/aarti/ganesh/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937367/ec417381c72a40eaa4c2c755a70695ec_oso3ma.jpg" alt="गणेश आरती">
-                <div class="card-overlay">
-                    <div class="card-title-hi">गणेश आरती</div>
-                    <div class="card-title-en">Ganesh Aarti</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-            <a href="/aarti/durga/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937366/b22d611884d29c4f71c1d95a753d5029_kd7xhh.jpg" alt="दुर्गा आरती">
-                <div class="card-overlay">
-                    <div class="card-title-hi">दुर्गा आरती</div>
-                    <div class="card-title-en">Durga Aarti</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-        </div>
-
-        <!-- STOTRA CARDS -->
-        <div class="collection-grid filter-group" data-category="stotra" style="display:none;">
-            <a href="/stotra/jyotirling/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778935472/034e7d631d3537160b6190efd2c5f9a7_wssjha.jpg" alt="ज्योतिर्लिंग स्तोत्र">
-                <div class="card-overlay">
-                    <div class="card-title-hi">द्वादश ज्योतिर्लिंग स्तोत्र</div>
-                    <div class="card-title-en">Dwadash Jyotirling</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-            <a href="/stotra/lingashtakam/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938076/aaa9c2ba980b973f735b0803fe36362f_ftvxgl.jpg" alt="लिंगाष्टकम">
-                <div class="card-overlay">
-                    <div class="card-title-hi">लिंगाष्टकम</div>
-                    <div class="card-title-en">Lingashtakam</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-            <a href="/stotra/vishnu-sahasranama/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938075/04ef5697ddd17c3a93f8d4345e6110e1_zabqql.jpg" alt="विष्णु सहस्रनाम">
-                <div class="card-overlay">
-                    <div class="card-title-hi">विष्णु सहस्रनाम</div>
-                    <div class="card-title-en">Vishnu Sahasranama</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-            <a href="/stotra/aditya-hridayam/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938075/47ef2779c2367cb993588606b994c829_scx5hk.jpg" alt="आदित्य हृदयम">
-                <div class="card-overlay">
-                    <div class="card-title-hi">आदित्य हृदयम</div>
-                    <div class="card-title-en">Aditya Hridayam</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-            <a href="/stotra/durga-saptashati/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938076/789cf582ef8c65fe95977446938e0127_udzqta.jpg" alt="दुर्गा सप्तशती">
-                <div class="card-overlay">
-                    <div class="card-title-hi">दुर्गा सप्तशती</div>
-                    <div class="card-title-en">Durga Saptashati</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-        </div>
-
-        <!-- SHLOK CARDS -->
-        <div class="collection-grid filter-group" data-category="shlok" style="display:none;">
-            <a href="/shlok/krishna-vasudevaya/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938379/dbbcc5a5681637881f49415363b61ec3_wnlldv.jpg" alt="कृष्ण वासुदेव">
-                <div class="card-overlay">
-                    <div class="card-title-hi">कृष्ण वासुदेव श्लोक</div>
-                    <div class="card-title-en">Krishna Vasudevaya</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-            <a href="/shlok/gayatri-mantra/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938378/045317131a329fa3c8d26247f7d0725c_dnpbxl.jpg" alt="गायत्री मंत्र">
-                <div class="card-overlay">
-                    <div class="card-title-hi">गायत्री मंत्र</div>
-                    <div class="card-title-en">Gayatri Mantra</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-            <a href="/shlok/mahamrityunjaya/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938377/96caf9a48981cad871f7fbcfa54eedbd_jkbdgs.jpg" alt="महामृत्युंजय">
-                <div class="card-overlay">
-                    <div class="card-title-hi">महामृत्युंजय मंत्र</div>
-                    <div class="card-title-en">Mahamrityunjaya</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-            <a href="/shlok/karagre-vasate/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938379/bbd3101aba7657b5264cb5fbc55e74e0_kdv1th.jpg" alt="कराग्रे वसते">
-                <div class="card-overlay">
-                    <div class="card-title-hi">कराग्रे वसते लक्ष्मीः</div>
-                    <div class="card-title-en">Karagre Vasate</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-            <a href="/shlok/twameva-mata/" class="collection-card">
-                <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938380/e1c2f758f9610659c3189c8da908e6c2_sl0bi8.jpg" alt="त्वमेव माता">
-                <div class="card-overlay">
-                    <div class="card-title-hi">त्वमेव माता च पिता त्वमेव</div>
-                    <div class="card-title-en">Twameva Mata</div>
-                    <div class="card-read-more">अभी पढ़ें →</div>
-                </div>
-            </a>
-        </div>
-    </section>
-
-
-
-
-
-
+    <!-- SHLOK -->
+    <div class="collection-grid filter-group" data-category="shlok" style="display:none;">
+        <a href="/shlok/krishna-vasudevaya/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938379/dbbcc5a5681637881f49415363b61ec3_wnlldv.jpg" alt="कृष्ण वासुदेव">
+            <div class="card-overlay">
+                <div class="card-title-hi">कृष्ण वासुदेव श्लोक</div>
+                <div class="card-title-en">Krishna Vasudevaya</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/shlok/gayatri-mantra/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938378/045317131a329fa3c8d26247f7d0725c_dnpbxl.jpg" alt="गायत्री मंत्र">
+            <div class="card-overlay">
+                <div class="card-title-hi">गायत्री मंत्र</div>
+                <div class="card-title-en">Gayatri Mantra</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/shlok/mahamrityunjaya/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938377/96caf9a48981cad871f7fbcfa54eedbd_jkbdgs.jpg" alt="महामृत्युंजय">
+            <div class="card-overlay">
+                <div class="card-title-hi">महामृत्युंजय मंत्र</div>
+                <div class="card-title-en">Mahamrityunjaya</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/shlok/karagre-vasate/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938379/bbd3101aba7657b5264cb5fbc55e74e0_kdv1th.jpg" alt="कराग्रे वसते">
+            <div class="card-overlay">
+                <div class="card-title-hi">कराग्रे वसते लक्ष्मीः</div>
+                <div class="card-title-en">Karagre Vasate</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/shlok/twameva-mata/" class="collection-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778938380/e1c2f758f9610659c3189c8da908e6c2_sl0bi8.jpg" alt="त्वमेव माता">
+            <div class="card-overlay">
+                <div class="card-title-hi">त्वमेव माता च पिता त्वमेव</div>
+                <div class="card-title-en">Twameva Mata</div>
+                <div class="card-read-more">अभी पढ़ें →</div>
+            </div>
+        </a>
+    </div>
+</section>
 
 <!-- ============ DEITY EXPLORATION ============ -->
 <br><section class="section container">
-<div class="section-header">
-<div class="section-header-left">
-<span class="section-tag">DIVINE PANTHEON</span>
-<h2 class="section-title">देवताओं का अन्वेषण</h2>
-<p class="section-desc">दिव्य के शाश्वत रूपों की कहानियों, प्रतीकवाद और मंत्रों की खोज करें।</p>
-</div>
-<a href="/deities/" class="view-all-btn">सभी देखें →</a>
-</div>
+    <div class="section-header">
+        <div class="section-header-left">
+            <span class="section-tag">DIVINE PANTHEON</span>
+            <h2 class="section-title">देवताओं का अन्वेषण</h2>
+            <p class="section-desc">दिव्य के शाश्वत रूपों की कहानियों, प्रतीकवाद और मंत्रों की खोज करें।</p>
+        </div>
+        <a href="/deities/" class="view-all-btn">सभी देखें →</a>
+    </div>
 
-
-<div class="deity-grid">
-<a href="/deity/radha/" class="deity-card">
-<img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778939002/f05f485e2e9fe8389f8e1594383ecce4_weflpg.jpg" alt="राधा">
-<div class="deity-overlay">
-<div class="deity-name">राधा</div>
-<div class="deity-desc">राधा माता भगवान कृष्ण की अर्धांगिनी और प्रेम की देवी मानी जाती हैं।</div>
-<div class="deity-read">अभी पढ़ें →</div>
-</div>
-</a>
-<a href="/deity/shiv/" class="deity-card">
-<img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937061/20d89b10b4dc6b1c603621dd86d246d9_bevbhi.jpg" alt="शिव">
-<div class="deity-overlay">
-<div class="deity-name">शिव</div>
-<div class="deity-desc">शिव देव त्रिदेवों में से एक हैं, जो संहारक के रूप में जाने जाते हैं।</div>
-<div class="deity-read">अभी पढ़ें →</div>
-</div>
-</a>
-<a href="/deity/krishna/" class="deity-card">
-<img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778939002/3619372184ab779480e545a19b0169c3_ezbko4.jpg" alt="कृष्ण">
-<div class="deity-overlay">
-<div class="deity-name">कृष्ण</div>
-<div class="deity-desc">कृष्ण भगवान प्रेम, भक्ति और आनंद के प्रतीक हैं, और भगवद गीता के उपदेशक।</div>
-<div class="deity-read">अभी पढ़ें →</div>
-</div>
-</a>
-<a href="/deity/hanuman/" class="deity-card">
-<img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778939002/74f1f1ed10f394f30645b11c6da95791_nvyjgm.jpg" alt="हनुमान">
-<div class="deity-overlay">
-<div class="deity-name">हनुमान</div>
-<div class="deity-desc">हनुमान जी शक्ति, भक्ति और बुद्धिमत्ता के प्रतीक हैं, जिन्हें संकटमोचक कहा जाता है।</div>
-<div class="deity-read">अभी पढ़ें →</div>
-</div>
-</a>
-<a href="/deity/ganesh/" class="deity-card">
-<img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778939001/5ac2d60191f43a0ef5249a754c4056b0_a6tybz.jpg" alt="गणेश">
-<div class="deity-overlay">
-<div class="deity-name">गणेश</div>
-<div class="deity-desc">गणेश जी विघ्नहर्ता और बुद्धि के देवता हैं, नए कार्यों की शुरुआत में पूजनीय।</div>
-<div class="deity-read">अभी पढ़ें →</div>
-</div>
-</a>
-</div>
+    <div class="deity-grid">
+        <a href="/deity/radha/" class="deity-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778939002/f05f485e2e9fe8389f8e1594383ecce4_weflpg.jpg" alt="राधा">
+            <div class="deity-overlay">
+                <div class="deity-name">राधा</div>
+                <div class="deity-desc">राधा माता भगवान कृष्ण की अर्धांगिनी और प्रेम की देवी मानी जाती हैं।</div>
+                <div class="deity-read">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/deity/shiv/" class="deity-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778937061/20d89b10b4dc6b1c603621dd86d246d9_bevbhi.jpg" alt="शिव">
+            <div class="deity-overlay">
+                <div class="deity-name">शिव</div>
+                <div class="deity-desc">शिव देव त्रिदेवों में से एक हैं, जो संहारक के रूप में जाने जाते हैं।</div>
+                <div class="deity-read">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/deity/krishna/" class="deity-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778939002/3619372184ab779480e545a19b0169c3_ezbko4.jpg" alt="कृष्ण">
+            <div class="deity-overlay">
+                <div class="deity-name">कृष्ण</div>
+                <div class="deity-desc">कृष्ण भगवान प्रेम, भक्ति और आनंद के प्रतीक हैं, और भगवद गीता के उपदेशक।</div>
+                <div class="deity-read">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/deity/hanuman/" class="deity-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778939002/74f1f1ed10f394f30645b11c6da95791_nvyjgm.jpg" alt="हनुमान">
+            <div class="deity-overlay">
+                <div class="deity-name">हनुमान</div>
+                <div class="deity-desc">हनुमान जी शक्ति, भक्ति और बुद्धिमत्ता के प्रतीक हैं, जिन्हें संकटमोचक कहा जाता है।</div>
+                <div class="deity-read">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/deity/ganesh/" class="deity-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778939001/5ac2d60191f43a0ef5249a754c4056b0_a6tybz.jpg" alt="गणेश">
+            <div class="deity-overlay">
+                <div class="deity-name">गणेश</div>
+                <div class="deity-desc">गणेश जी विघ्नहर्ता और बुद्धि के देवता हैं, नए कार्यों की शुरुआत में पूजनीय।</div>
+                <div class="deity-read">अभी पढ़ें →</div>
+            </div>
+        </a>
+    </div>
 </section>
-
-
-
 
 <!-- ============ FESTIVALS ============ -->
 <br><section class="section container">
-<div class="section-header">
-<div class="section-header-left">
-<span class="section-tag">Celebration Times</span>
-<h2 class="section-title">भारतीय त्योहार</h2>
-<p class="section-desc">आगामी भारतीय त्योहारों के बारे में जानें और उनकी महत्ता को समझें।</p>
-</div>
-<a href="/festivals/" class="view-all-btn">सभी देखें →</a>
-</div>
+    <div class="section-header">
+        <div class="section-header-left">
+            <span class="section-tag">Celebration Times</span>
+            <h2 class="section-title">भारतीय त्योहार</h2>
+            <p class="section-desc">आगामी भारतीय त्योहारों के बारे में जानें और उनकी महत्ता को समझें।</p>
+        </div>
+        <a href="/festivals/" class="view-all-btn">सभी देखें →</a>
+    </div>
 
-
-<div class="festival-grid">
-<a href="/festivals/raksha-bandhan/" class="festival-card">
-<img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778940213/60a1a2729114497fb0814730f5213391_seiosk.jpg" alt="रक्षा बंधन">
-<div class="festival-overlay">
-<div class="festival-name">रक्षा बंधन</div>
-<div class="festival-desc">भाई-बहन के अटूट प्रेम और सुरक्षा के संकल्प का पर्व।</div>
-<div class="festival-read">अभी पढ़ें →</div>
-</div>
-</a>
-<a href="/festivals/janmashtami/" class="festival-card">
-<img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778940214/b9ba7178986de56d4c6353197753bf2e_xp2g4s.jpg" alt="जन्माष्टमी">
-<div class="festival-overlay">
-<div class="festival-name">जन्माष्टमी</div>
-<div class="festival-desc">भगवान श्री कृष्ण के पृथ्वी पर अवतरण का महापर्व।</div>
-<div class="festival-read">अभी पढ़ें →</div>
-</div>
-</a>
-<a href="/festivals/ganesh-chaturthi/" class="festival-card">
-<img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778940214/ce93a8ef7b938b741222ec61e9977e1e_fg25w5.jpg" alt="गणेश चतुर्थी">
-<div class="festival-overlay">
-<div class="festival-name">गणेश चतुर्थी</div>
-<div class="festival-desc">भगवान गणेश के आगमन और विघ्नहर्ता के रूप में उनकी पूजा का महापर्व है।</div>
-<div class="festival-read">अभी पढ़ें →</div>
-</div>
-</a>
-<a href="/festivals/navratri/" class="festival-card">
-<img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778940214/e10317a45b5505d00a672751610f08de_eft2kk.jpg" alt="नवरात्रि">
-<div class="festival-overlay">
-<div class="festival-name">नवरात्रि</div>
-<div class="festival-desc">माँ दुर्गा के नौ रूपों की शक्ति की उपासना का पर्व।</div>
-<div class="festival-read">अभी पढ़ें →</div>
-</div>
-</a>
-<a href="/festivals/dussehra/" class="festival-card">
-<img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778940212/03b0e30381450457c3f3c578eb5cd2fc_h2trn4.jpg" alt="दशहरा">
-<div class="festival-overlay">
-<div class="festival-name">दशहरा</div>
-<div class="festival-desc">बुराई पर अच्छाई और अधर्म पर धर्म की जीत का प्रतीक।</div>
-<div class="festival-read">अभी पढ़ें →</div>
-</div>
-</a>
-</div>
+    <div class="festival-grid">
+        <a href="/festivals/raksha-bandhan/" class="festival-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778940213/60a1a2729114497fb0814730f5213391_seiosk.jpg" alt="रक्षा बंधन">
+            <div class="festival-overlay">
+                <div class="festival-name">रक्षा बंधन</div>
+                <div class="festival-desc">भाई-बहन के अटूट प्रेम और सुरक्षा के संकल्प का पर्व।</div>
+                <div class="festival-read">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/festivals/janmashtami/" class="festival-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778940214/b9ba7178986de56d4c6353197753bf2e_xp2g4s.jpg" alt="जन्माष्टमी">
+            <div class="festival-overlay">
+                <div class="festival-name">जन्माष्टमी</div>
+                <div class="festival-desc">भगवान श्री कृष्ण के पृथ्वी पर अवतरण का महापर्व।</div>
+                <div class="festival-read">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/festivals/ganesh-chaturthi/" class="festival-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778940214/ce93a8ef7b938b741222ec61e9977e1e_fg25w5.jpg" alt="गणेश चतुर्थी">
+            <div class="festival-overlay">
+                <div class="festival-name">गणेश चतुर्थी</div>
+                <div class="festival-desc">भगवान गणेश के आगमन और विघ्नहर्ता के रूप में उनकी पूजा का महापर्व है।</div>
+                <div class="festival-read">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/festivals/navratri/" class="festival-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778940214/e10317a45b5505d00a672751610f08de_eft2kk.jpg" alt="नवरात्रि">
+            <div class="festival-overlay">
+                <div class="festival-name">नवरात्रि</div>
+                <div class="festival-desc">माँ दुर्गा के नौ रूपों की शक्ति की उपासना का पर्व।</div>
+                <div class="festival-read">अभी पढ़ें →</div>
+            </div>
+        </a>
+        <a href="/festivals/dussehra/" class="festival-card">
+            <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778940212/03b0e30381450457c3f3c578eb5cd2fc_h2trn4.jpg" alt="दशहरा">
+            <div class="festival-overlay">
+                <div class="festival-name">दशहरा</div>
+                <div class="festival-desc">बुराई पर अच्छाई और अधर्म पर धर्म की जीत का प्रतीक।</div>
+                <div class="festival-read">अभी पढ़ें →</div>
+            </div>
+        </a>
+    </div>
 </section>
-
-
-
 
 <!-- ============ BLOG SECTION ============ -->
 <br><section class="section container">
-<div class="section-header">
-<div class="section-header-left">
-<span class="section-tag">Devotional Blog</span>
-<h2 class="section-title">भक्ति ब्लॉग</h2>
-<p class="section-desc">सरल साधना, नाम जाप, आरती और भक्तिमय जीवन पर शांत और उपयोगी लेख।</p>
-</div>
-<a href="/blog/" class="view-all-btn">सभी देखें →</a>
-</div>
+    <div class="section-header">
+        <div class="section-header-left">
+            <span class="section-tag">Devotional Blog</span>
+            <h2 class="section-title">भक्ति ब्लॉग</h2>
+            <p class="section-desc">सरल साधना, नाम जाप, आरती और भक्तिमय जीवन पर शांत और उपयोगी लेख।</p>
+        </div>
+        <a href="/blog/" class="view-all-btn">सभी देखें →</a>
+    </div>
 
-
-<div class="blog-grid">
-<a href="/blog/hanuman-chalisa-benefits/" class="blog-card">
-<div class="blog-image">
-<img src="https://www.dharmapath.in/_next/image?url=%2Fimages%2Fchalisa%2Fhanuman_chalisa_devotional.png&w=1080&q=75" alt="हनुमान चालीसा">
-</div>
-<div class="blog-content">
-<div class="blog-meta">
-<span class="blog-tag">दैनिक साधना</span>
-<span>🕒 8 मिनट</span>
-</div>
-<h3 class="blog-title">दैनिक हनुमान चालीसा पाठ के लाभ: विस्तार से</h3>
-<p class="blog-excerpt">हनुमान चालीसा का नियमित पाठ मन को स्थिर, हृदय को निर्भय और दिनचर्या को अनुशासित बनाता है।</p>
-<span class="blog-read-link">लेख पढ़ें →</span>
-</div>
-</a>
-
-
-<a href="/blog/ram-naam-jap/" class="blog-card">
-<div class="blog-image">
-<img src="https://www.dharmapath.in/_next/image?url=%2Fimages%2Fchalisa%2Fhanuman_chalisa_devotional.png&w=1080&q=75" alt="राम नाम जाप">
-</div>
-<div class="blog-content">
-<div class="blog-meta">
-<span class="blog-tag">नाम जाप</span>
-<span>🕒 8 मिनट</span>
-</div>
-<h3 class="blog-title">राम नाम जाप के 5 चमत्कारिक लाभ: एक महामंत्र का विज्ञान</h3>
-<p class="blog-excerpt">राम केवल एक नाम नहीं, संपूर्ण ब्रह्मांड की ऊर्जा है। राम नाम जपने से मानसिक शांति मिलती है।</p>
-<span class="blog-read-link">लेख पढ़ें →</span>
-</div>
-</a>
-
-
-<a href="/blog/jap-kaise-ginen/" class="blog-card">
-<div class="blog-image">
-<img src="https://www.dharmapath.in/_next/image?url=%2Fimages%2Fchalisa%2Fhanuman_chalisa_devotional.png&w=1080&q=75" alt="जाप कैसे गिनें">
-</div>
-<div class="blog-content">
-<div class="blog-meta">
-<span class="blog-tag">नाम जाप</span>
-<span>🕒 10 मिनट</span>
-</div>
-<h3 class="blog-title">जाप कैसे गिनें: माला जपने की सही विधि और नियम</h3>
-<p class="blog-excerpt">तुलसी या रुद्राक्ष की माला से जाप करने के कठोर नियम होते हैं। सुमेरु को क्यों नहीं लांघते?</p>
-<span class="blog-read-link">लेख पढ़ें →</span>
-</div>
-</a>
-</div>
+    <div class="blog-grid">
+        <a href="/blog/hanuman-chalisa-benefits/" class="blog-card">
+            <div class="blog-image">
+                <img src="https://www.dharmapath.in/_next/image?url=%2Fimages%2Fchalisa%2Fhanuman_chalisa_devotional.png&w=1080&q=75" alt="हनुमान चालीसा">
+            </div>
+            <div class="blog-content">
+                <div class="blog-meta">
+                    <span class="blog-tag">दैनिक साधना</span>
+                    <span>🕒 8 मिनट</span>
+                </div>
+                <h3 class="blog-title">दैनिक हनुमान चालीसा पाठ के लाभ: विस्तार से</h3>
+                <p class="blog-excerpt">हनुमान चालीसा का नियमित पाठ मन को स्थिर, हृदय को निर्भय और दिनचर्या को अनुशासित बनाता है।</p>
+                <span class="blog-read-link">लेख पढ़ें →</span>
+            </div>
+        </a>
+        <a href="/blog/ram-naam-jap/" class="blog-card">
+            <div class="blog-image">
+                <img src="https://www.dharmapath.in/_next/image?url=%2Fimages%2Fchalisa%2Fhanuman_chalisa_devotional.png&w=1080&q=75" alt="राम नाम जाप">
+            </div>
+            <div class="blog-content">
+                <div class="blog-meta">
+                    <span class="blog-tag">नाम जाप</span>
+                    <span>🕒 8 मिनट</span>
+                </div>
+                <h3 class="blog-title">राम नाम जाप के 5 चमत्कारिक लाभ: एक महामंत्र का विज्ञान</h3>
+                <p class="blog-excerpt">राम केवल एक नाम नहीं, संपूर्ण ब्रह्मांड की ऊर्जा है। राम नाम जपने से मानसिक शांति मिलती है।</p>
+                <span class="blog-read-link">लेख पढ़ें →</span>
+            </div>
+        </a>
+        <a href="/blog/jap-kaise-ginen/" class="blog-card">
+            <div class="blog-image">
+                <img src="https://www.dharmapath.in/_next/image?url=%2Fimages%2Fchalisa%2Fhanuman_chalisa_devotional.png&w=1080&q=75" alt="जाप कैसे गिनें">
+            </div>
+            <div class="blog-content">
+                <div class="blog-meta">
+                    <span class="blog-tag">नाम जाप</span>
+                    <span>🕒 10 मिनट</span>
+                </div>
+                <h3 class="blog-title">जाप कैसे गिनें: माला जपने की सही विधि और नियम</h3>
+                <p class="blog-excerpt">तुलसी या रुद्राक्ष की माला से जाप करने के कठोर नियम होते हैं। सुमेरु को क्यों नहीं लांघते?</p>
+                <span class="blog-read-link">लेख पढ़ें →</span>
+            </div>
+        </a>
+    </div>
 </section>
-
-
-
 
 <!-- ============ THOUGHT OF THE DAY ============ -->
 <br><section class="thought-section container">
-<div class="thought-header">
-<span class="section-tag">Daily Reflection</span>
-<h2 class="section-title">दिन का विचार</h2>
-<p class="section-desc">दैनिक प्रेरणा</p>
-</div>
+    <div class="thought-header">
+        <span class="section-tag">Daily Reflection</span>
+        <h2 class="section-title">दिन का विचार</h2>
+        <p class="section-desc">दैनिक प्रेरणा</p>
+    </div>
 
-
-<div class="thought-card">
-<div class="quote-icon">❝</div>
-<p class="thought-text">"जो बोया जाएगा, वही काटा जाएगा।"</p>
-<div class="thought-source">BHAJANLOK.IN</div>
-</div>
+    <div class="thought-card">
+        <div class="quote-icon">❝</div>
+        <p class="thought-text">"जो बोया जाएगा, वही काटा जाएगा।"</p>
+        <div class="thought-source">BHAJANLOK.IN</div>
+    </div>
 </section><br>
 
+<!-- ============ FOOTER PLACEHOLDER ============ -->
+<!-- Footer content loaded from /footer.html via fetch (see script below) -->
+<div id="footer-placeholder"></div>
 
-
-
-<!-- ============ FOOTER ============ -->
-<footer>
-<div class="container">
-<div class="footer-grid">
-
-
-<div>
-<div style="margin-bottom: 16px;">
-    <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778996615/c52aed3d-c26d-48f7-8ace-8bb74f971108_ve8ab0.png" alt="भजन लोक" class="footer-logo">
-</div>
-<p class="footer-about">सनातन संस्कृति की पवित्र परंपराओं को सरल, सुंदर और डिजिटल रूप में हर भक्त तक पहुँचाने के लिए समर्पित एक आध्यात्मिक मंच।</p>
-
-</div>
-
-
-<div>
-<h4 class="footer-col-title">प्रार्थनाएं</h4>
-<ul class="footer-links">
-<li><a href="/deities/">आरती</a></li>
-<li><a href="/temples/">चालीसा</a></li>
-<li><a href="/festivals/">व्रत कथा</a></li>
-<li><a href="/shastra/">भजन</a></li>
-<li><a href="/chalisa/">मंत्र</a></li>
-</ul>
-</div>
-
-<div>
-<h4 class="footer-col-title">आरती</h4>
-<ul class="footer-links">
-<li><a href="/deities/">गणेश आरती</a></li>
-<li><a href="/temples/">कृष्ण आरती</a></li>
-<li><a href="/festivals/">दुर्गा आरती</a></li>
-<li><a href="/shastra/">हनुमान आरती</a></li>
-<li><a href="/chalisa/">राम आरती</a></li>
-</ul>
-</div>
-
-  <div>
-<h4 class="footer-col-title">चालीसा</h4>
-<ul class="footer-links">
-<li><a href="/deities/">हनुमान चालीसा</a></li>
-<li><a href="/temples/">राम चालीसा</a></li>
-<li><a href="/festivals/">दुर्गा चालीसा</a></li>
-<li><a href="/shastra/">शिव चालीसा</a></li>
-<li><a href="/chalisa/">विष्णु चालीसा</a></li>
-</ul>
-</div>
-
- 
-  <div>
-<h4 class="footer-col-title">देवता</h4>
-<ul class="footer-links">
-<li><a href="/deities/">गणेश</a></li>
-<li><a href="/temples/">राम</a></li>
-<li><a href="/festivals/">हनुमान</a></li>
-<li><a href="/shastra/">विष्णु</a></li>
-<li><a href="/chalisa/">दुर्गा</a></li>
-</ul>
-</div>
-
-
-
-
-
-</div>
-
-
-<div class="footer-bottom">
-<div>© 2026 धर्म पथ। सभी अधिकार सुरक्षित।</div>
-
-</div>
-</div>
-</footer>
-
-
-
-
+<!-- ============ PAGE-SPECIFIC SCRIPT ============ -->
 <script>
-function toggleSearch() {
-const searchBox = document.getElementById('searchBox');
-const searchContainer = document.querySelector('.search-container');
-searchBox.classList.toggle('active');
-searchContainer.classList.toggle('active');
-if (searchBox.classList.contains('active')) {
-setTimeout(() => document.getElementById('searchInput').focus(), 200);
-}
-}
-
-
-function toggleMobileMenu() {
-const nav = document.getElementById('mobileNav');
-const overlay = document.querySelector('.mobile-nav-overlay');
-nav.classList.toggle('active');
-overlay.classList.toggle('active');
-}
-
-
-function toggleMobileSub(el) {
-const parent = el.parentElement;
-document.querySelectorAll('.mobile-has-sub.open').forEach(item => {
-if (item !== parent) item.classList.remove('open');
-});
-parent.classList.toggle('open');
-}
-
-
+/* Filter tabs in "पवित्र संग्रह" section */
 function filterCategory(btn, category) {
-    // Active tab change
     document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
     btn.classList.add('active');
-    
-    // Show/hide cards
+
     document.querySelectorAll('.filter-group').forEach(group => {
-        if (group.dataset.category === category) {
-            group.style.display = 'grid';
-        } else {
-            group.style.display = 'none';
-        }
+        group.style.display = (group.dataset.category === category) ? 'grid' : 'none';
     });
-    
-    // Update "सभी देखें" button URL
+
     const viewAllBtn = document.getElementById('viewAllBtn');
     const urls = {
         'chalisa': { url: '/chalisa/', text: 'सभी चालीसा देखें →' },
@@ -2212,11 +1107,33 @@ function filterCategory(btn, category) {
         viewAllBtn.textContent = urls[category].text;
     }
 }
-
-
-
 </script>
 
+<!-- ============ HEADER + FOOTER LOADER ============ -->
+<!-- This script fetches /header.html and /footer.html and injects them
+     into the placeholders above. Same code goes on every page. -->
+<script>
+fetch('/header.html')
+    .then(res => res.text())
+    .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        // The header file contains <script> tags. innerHTML does NOT
+        // execute them — so we manually re-create them so they run.
+        document.querySelectorAll('#header-placeholder script').forEach(oldScript => {
+            const newScript = document.createElement('script');
+            newScript.textContent = oldScript.textContent;
+            oldScript.parentNode.replaceChild(newScript, oldScript);
+        });
+    })
+    .catch(err => console.error('Header load failed:', err));
+
+fetch('/footer.html')
+    .then(res => res.text())
+    .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+    })
+    .catch(err => console.error('Footer load failed:', err));
+</script>
 
 </body>
 </html>
