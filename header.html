@@ -1,0 +1,333 @@
+<!-- ============================================================
+     HEADER COMPONENT (self-contained: HTML + CSS + JS)
+     Used on every page via fetch() from /header.html
+     ============================================================ -->
+
+<!-- Fonts + Font Awesome (loaded here so any page that includes
+     the header automatically gets the icons + Devanagari fonts) -->
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* ---------- TOP ANNOUNCEMENT BAR ---------- */
+.top-bar {
+    background: #fde8c9;
+    color: #8a4a0a;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Mukta', sans-serif;
+}
+@media (max-width: 768px) {
+    .top-bar { font-size: 12px; padding: 8px 16px; }
+}
+
+/* ---------- MAIN HEADER ---------- */
+.main-header {
+    background: rgba(250, 248, 243, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border, #e5e0d3);
+}
+.logo-img { height: 50px; width: auto; display: block; }
+@media (max-width: 768px) { .logo-img { height: 40px; } }
+
+.nav-wrapper { display: flex; align-items: center; gap: 16px; }
+.nav-menu { display: flex; gap: 4px; list-style: none; align-items: center; }
+.nav-menu > li { position: relative; }
+.nav-menu > li > a {
+    display: block;
+    padding: 10px 16px;
+    color: var(--text-dark, #1a2332);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.nav-menu > li > a:hover { color: var(--accent, #c89853); }
+.home-icon-btn { font-size: 20px !important; padding: 10px 12px !important; }
+.has-dropdown > a::after { content: ' ▾'; font-size: 12px; margin-left: 2px; }
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 220px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    list-style: none;
+    padding: 8px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s;
+    border: 1px solid var(--border, #e5e0d3);
+}
+.has-dropdown:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.dropdown li a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--text-dark, #1a2332);
+    text-decoration: none;
+    font-size: 15px;
+}
+.dropdown li a:hover {
+    background: var(--bg-cream, #faf8f3);
+    color: var(--accent, #c89853);
+}
+
+/* ---------- LANGUAGE TOGGLE ---------- */
+.lang-toggle {
+    background: transparent;
+    border: 1px solid var(--border, #e5e0d3);
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: var(--text-dark, #1a2332);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+.lang-toggle:hover {
+    background: var(--text-dark, #1a2332);
+    color: white;
+    border-color: var(--text-dark, #1a2332);
+}
+
+/* ---------- MOBILE MENU ---------- */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: var(--text-dark, #1a2332);
+}
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85%;
+    max-width: 320px;
+    height: 100vh;
+    background: white;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.1);
+}
+.mobile-nav.active { transform: translateX(0); }
+.mobile-nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 150;
+}
+.mobile-nav-overlay.active { display: block; }
+.mobile-nav-close {
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: var(--text-dark, #1a2332);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.mobile-menu-list { list-style: none; }
+.mobile-menu-list > li { border-bottom: 1px solid var(--border, #e5e0d3); }
+.mobile-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    color: var(--text-dark, #1a2332);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.mobile-link .arrow { font-size: 11px; transition: transform 0.3s; }
+.mobile-has-sub.open .arrow { transform: rotate(180deg); color: var(--accent, #c89853); }
+.mobile-submenu {
+    max-height: 0;
+    overflow: hidden;
+    background: var(--bg-cream, #faf8f3);
+    transition: max-height 0.3s;
+    list-style: none;
+}
+.mobile-has-sub.open .mobile-submenu { max-height: 500px; }
+.mobile-submenu li a {
+    display: block;
+    padding: 12px 25px;
+    color: var(--text-muted, #6b7280);
+    text-decoration: none;
+    font-size: 15px;
+}
+.mobile-submenu li a:hover { color: var(--accent, #c89853); }
+
+@media (max-width: 1200px) {
+    .main-header { padding: 18px 40px; }
+    .nav-menu > li > a { padding: 10px 12px; font-size: 15px; }
+}
+@media (max-width: 1024px) {
+    .main-header { padding: 18px 80px; }
+}
+@media (max-width: 768px) {
+    .main-header { padding: 14px 30px; }
+    .nav-menu { display: none; }
+    .mobile-menu-btn { display: block; }
+    .lang-toggle { padding: 6px 12px; font-size: 13px; }
+}
+@media (max-width: 480px) {
+    .main-header { padding: 12px 16px; }
+    .lang-toggle { padding: 5px 10px; font-size: 12px; }
+}
+</style>
+
+<!-- ---------- TOP BAR ---------- -->
+<div class="top-bar">
+    🙏 हमारी वेबसाइट पर पधारने के लिए आपका धन्यवाद - हमारा प्रयास एक भक्त को भगवान से जोड़े रखना है 🙏
+</div>
+
+<!-- ---------- HEADER ---------- -->
+<header class="main-header">
+    <a href="/" class="logo">
+        <img src="https://res.cloudinary.com/ddf8equjt/image/upload/v1778996615/c52aed3d-c26d-48f7-8ace-8bb74f971108_ve8ab0.png" alt="भजन लोक" class="logo-img">
+    </a>
+
+    <div class="nav-wrapper">
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="/" class="home-icon-btn"><i class="fa-solid fa-house"></i></a></li>
+                <li class="has-dropdown">
+                    <a href="/aarti/">आरती</a>
+                    <ul class="dropdown">
+                        <li><a href="/aarti/hanuman/">हनुमान आरती</a></li>
+                        <li><a href="/aarti/ganesh/">गणेश आरती</a></li>
+                        <li><a href="/aarti/shiv/">शिव आरती</a></li>
+                        <li><a href="/aarti/">सभी आरती →</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/chalisa/">चालीसा</a>
+                    <ul class="dropdown">
+                        <li><a href="/chalisa/hanuman/">हनुमान चालीसा</a></li>
+                        <li><a href="/chalisa/durga/">दुर्गा चालीसा</a></li>
+                        <li><a href="/chalisa/">सभी चालीसा →</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/bhajan/">भजन</a>
+                    <ul class="dropdown">
+                        <li><a href="/bhajan/krishna/">कृष्ण भजन</a></li>
+                        <li><a href="/bhajan/">सभी भजन →</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/festivals/">त्योहार</a>
+                    <ul class="dropdown">
+                        <li><a href="/festivals/diwali/">दीवाली</a></li>
+                        <li><a href="/festivals/navratri/">नवरात्रि</a></li>
+                        <li><a href="/festivals/">सभी त्योहार →</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="/anya/">अन्य</a>
+                    <ul class="dropdown">
+                        <li><a href="/temples/">मंदिर</a></li>
+                        <li><a href="/gods/">देवता</a></li>
+                        <li><a href="/vrat-katha/">व्रत कथा</a></li>
+                        <li><a href="/mantra/">मंत्र/श्लोक</a></li>
+                        <li><a href="/stotra/">स्तोत्र और स्तुति</a></li>
+                        <li><a href="/blog/">ब्लॉग</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Language toggle: href is set dynamically by the script below -->
+        <a href="#" class="lang-toggle" id="lang-switch">🌐 EN</a>
+
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+</header>
+
+<!-- ---------- MOBILE NAV ---------- -->
+<div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
+
+<nav class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" onclick="toggleMobileMenu()">✕</button>
+    <ul class="mobile-menu-list">
+        <li><a href="/" class="mobile-link"><i class="fa-solid fa-house"></i> होम</a></li>
+        <li class="mobile-has-sub">
+            <a href="#" class="mobile-link" onclick="toggleMobileSub(this); return false;">आरती <span class="arrow">▼</span></a>
+            <ul class="mobile-submenu">
+                <li><a href="/aarti/hanuman/">हनुमान आरती</a></li>
+                <li><a href="/aarti/ganesh/">गणेश आरती</a></li>
+                <li><a href="/aarti/">सभी आरती →</a></li>
+            </ul>
+        </li>
+        <li class="mobile-has-sub">
+            <a href="#" class="mobile-link" onclick="toggleMobileSub(this); return false;">चालीसा <span class="arrow">▼</span></a>
+            <ul class="mobile-submenu">
+                <li><a href="/chalisa/hanuman/">हनुमान चालीसा</a></li>
+                <li><a href="/chalisa/">सभी चालीसा →</a></li>
+            </ul>
+        </li>
+        <li><a href="/bhajan/" class="mobile-link">भजन</a></li>
+        <li><a href="/festivals/" class="mobile-link">त्योहार</a></li>
+        <li><a href="/temples/" class="mobile-link">मंदिर</a></li>
+        <li><a href="/gods/" class="mobile-link">देवता</a></li>
+        <li><a href="/vrat-katha/" class="mobile-link">व्रत कथा</a></li>
+        <li><a href="/stotra/" class="mobile-link">स्तोत्र और स्तुति</a></li>
+        <li><a href="/mantra/" class="mobile-link">मंत्र और श्लोक</a></li>
+        <li><a href="/blog/" class="mobile-link">ब्लॉग</a></li>
+    </ul>
+</nav>
+
+<script>
+/* ---------- Mobile menu open/close ---------- */
+function toggleMobileMenu() {
+    const nav = document.getElementById('mobileNav');
+    const overlay = document.querySelector('.mobile-nav-overlay');
+    nav.classList.toggle('active');
+    overlay.classList.toggle('active');
+}
+
+/* ---------- Mobile submenu open/close ---------- */
+function toggleMobileSub(el) {
+    const parent = el.parentElement;
+    document.querySelectorAll('.mobile-has-sub.open').forEach(item => {
+        if (item !== parent) item.classList.remove('open');
+    });
+    parent.classList.toggle('open');
+}
+
+/* ---------- Dynamic EN button ---------- */
+/* Takes the user to the SAME page on en.bhajanlok.in.
+   Example: /aarti/hanuman/  →  https://en.bhajanlok.in/aarti/hanuman/ */
+(function setLangSwitchLink() {
+    const btn = document.getElementById('lang-switch');
+    if (!btn) return;
+    btn.href = 'https://en.bhajanlok.in' + window.location.pathname;
+})();
+</script>
